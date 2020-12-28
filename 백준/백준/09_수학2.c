@@ -1,6 +1,37 @@
 #include <stdio.h>
 #include <math.h>
 
+int math2Problem3() {
+	int start, end;
+	int result;
+	int i, j, flag;
+	float sqrt_i;
+
+	scanf("%d%d", &start, &end);
+
+	for (i = start; i <= end; i++) {
+		flag = 0;
+		if (i == 2) {
+			printf("%d\n", i);
+			continue;
+		}
+
+		if ( (i % 2) == 0 || i == 1 )
+			continue;
+
+		sqrt_i = sqrt( (double)i );
+		for (j = 3; j <= sqrt_i; j++)
+			if ((i % j) == 0) {
+				flag = 1;
+				break;
+			}
+
+		if (flag == 1)
+			continue;
+		printf("%d\n", i);
+	}
+}
+
 int math2Problem2() {
 	int min, max, flag;
 	int i, j, sum = 0;

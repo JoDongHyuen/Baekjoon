@@ -74,6 +74,7 @@ int main()
 	//math1Problem8(); // 알파 센타우리 문제
 	
 	//math2Problem1(); //1은 소수가 아니다 2는 소수이다 해당수의 루트까지만 구하면 빅오를 루트N까지 절약 가능하다!
-	math2Problem2();
+	//math2Problem2();
+	math2Problem3();
 }
 
