@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
 
-int math1Problem8()
+int math1Problem9()
 {
 	int test_case, result;
 	int x, y, dist;
@@ -37,6 +38,50 @@ int math1Problem8()
 			printf("%d\n", result);
 		}
 	}
+}
+
+int math1Problem8() {
+	char input[10001];
+	int i, length, max_len, flag = 0;
+	int num1[10001] = { 0 }, num2[10001] = { 0 };
+
+	/*input을 string으로 받아 num1에 역순으로 char에서 int로 변환해 넣어줌*/
+	scanf("%s", input);
+	length = strlen(input);
+	max_len = length;
+
+	for (i = 0; i < length; i++)
+		num1[i] = input[length - (i + 1)] - 48;
+
+	/*다시 한번 input을 string으로 받아 num2에 char에서 int로 변환해 역순으로 넣어줌*/
+	scanf("%s", input);
+	length = strlen(input);
+	if (max_len < length)
+		max_len = length;
+
+	for (i = 0; i < length; i++)
+		num2[i] = input[length - (i + 1)] - 48;
+
+	/*실질적으로 덧셈하는 파트*/
+	for (i = 0; i < max_len; i++) {
+		num1[i] = num1[i] + num2[i];
+		if (num1[i] >= 10) {
+
+			/*가장 높은 자리 수 올림 체크*/
+			/*why? 출력할 때를 위해서*/
+			if (i == (max_len - 1))
+				flag = 1;
+
+			num1[i] = num1[i] % 10;
+			num1[i + 1]++;
+		}
+	}
+
+	/*출력하는 파트*/
+	for (i = max_len - 1 + flag; i >= 0; i--)
+		printf("%d", num1[i]);
+	printf("\n");
+
 }
 
 int combination(int a, int b)

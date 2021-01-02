@@ -2,6 +2,7 @@
 
 int main()
 {
+	//test_atoi();
 	//star1();
 
 	//basic1(); //각 변수들의 바이트 길이 체크
@@ -71,10 +72,14 @@ int main()
 	//math1PRoblem5(); // 달팽이 올라가는 문제, 한 줄로 풀기 실패해서 결국 다른 사람 풀이 참고함(자존심 상함)
 	//math1Problem6();
 	//math1Problem7(); //파스칼 삼각형 문제
-	//math1Problem8(); // 알파 센타우리 문제
-	
+	math1Problem8(); // 큰 수 A + B
+	//math1Problem9(); // 알파 센타우리 문제
+
 	//math2Problem1(); //1은 소수가 아니다 2는 소수이다 해당수의 루트까지만 구하면 빅오를 루트N까지 절약 가능하다!
 	//math2Problem2();
-	math2Problem3();
+	//math2Problem3();
+	//math2Problem4(); //베르트랑 공준 문제 (n과 2n 사이엔 적어도 하나의 소수가 존재한다는 이론)
+	//math2Problem5(); //골드바흐 가설 문제 (2보다 큰 모든 짝수는 소수의 합으로 표현 가능하다)
+
 }
 

@@ -1,4 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+int test_atoi() {
+	char *str = "213";
+	int num;
+	int arr[3];
+
+	num = atoi(str);
+	
+	/* str[0]는 pointer형식이 아니라 atoi하면 에러가 발생함*/
+	arr[0] = atoi(str[0]); 
+
+	printf("%d\n", num);
+}
 
 int basic1()
 {
