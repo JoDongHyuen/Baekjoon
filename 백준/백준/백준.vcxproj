@@ -93,6 +93,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <TerminalServerAware>false</TerminalServerAware>
+      <StackReserveSize>10000000</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -147,6 +148,7 @@
     <ClCompile Include="05_1차원배열.c" />
     <ClCompile Include="03_for문.c" />
     <ClCompile Include="02_if문.c" />
+    <ClCompile Include="10_재귀.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="04_while문.c" />
     <ClCompile Include="07_문자열.c" />

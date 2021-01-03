@@ -2,8 +2,182 @@
 #include <stdbool.h>
 #include <math.h>
 
-int math2Problem6() {
+int math2Problem11() {
+	int test_case;
+	double x1, y1, r1, x2, y2, r2;
+	int i;
+	double distance;
 
+	scanf("%d", &test_case);
+
+	for (i = 0; i < test_case; i++) {
+		scanf("%lf%lf%lf%lf%lf%lf", &x1, &y1, &r1, &x2, &y2, &r2);
+		
+		if (x1 == x2 && y1 == y2) {
+			if (r1 == r2) {
+				printf("%d\n", -1);
+				continue;
+			}
+			else {
+				printf("%d\n", 0);
+				continue;
+			}
+		}
+
+		distance = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+		
+		/*두 원이 외접하는 경우*/
+		if (distance == r1 + r2)
+			printf("%d\n", 1);
+
+		/*두 원의 거리가 반지름의 합보다 먼 경우*/
+		else if (distance > r1 + r2)
+			printf("%d\n", 0);
+
+		/*두 원의 거리가 반지름의 합보다 가까운 경우*/
+		else {
+			/*두 원이 내접하는 경우*/
+			if (distance == abs(r1 - r2))
+				printf("%d\n", 1);
+
+			/*하나의 원 안에 다른 하나의 원이 속한 경우*/
+			else if (distance < abs(r1 - r2))
+				printf("%d\n", 0);
+
+			/*두 원의 교점이 두 개인 경우*/
+			else
+				printf("%d\n", 2);
+		}
+	}
+}
+
+int math2Problem10() {
+	double r;
+	double pi = 3.14159265359;
+
+	scanf("%lf", &r);
+
+	printf("%lf\n", r * r * pi);
+	printf("%lf\n", r * r * 2);
+}
+
+
+int math2Problem9() {
+	int x[3], max;
+	int i, pow_length;
+
+	while (1) {
+		scanf("%d%d%d", &x[0], &x[1], &x[2]);
+		if (x[0] == 0 && x[1] == 0 && x[2] == 0)
+			break;
+
+		pow_length = 0;
+		max = 0;
+		for (i = 1; i <= 2; i++) {
+			if (x[max] < x[i])
+				max = i;
+		}
+
+		for (i = 0; i <= 2; i++) {
+			if (i == max)
+				continue;
+			else
+				pow_length = pow_length + x[i] * x[i];
+		}
+
+		if ( pow_length == (x[max] * x[max]) )
+			printf("right\n");
+		else
+			printf("wrong\n");
+	}
+}
+
+/*축과 평행이 아닌 경우 네번째 점 구하는 방법*/
+int math2Problem8ver2() {
+	/* 접근 방법 : 주어진 세점 중 빗변의 대각에 해당하는 점(이하 A라 칭함)을 구해야함
+	 * i) 각 점의 차이를 구한후 내적이 0이 나오는 점을 선택 or 두 점을 선택해서 길이가 가장 길 때 나머지 점이 A임
+	 * ii) A를 구했다면, 다른 점 (B, C라고 칭함)들을 통해 B + C - A 하면 답이 나옴*/
+
+	int pos_x[3], pos_y[3];
+	int fourth_x, fourth_y;
+	int vector1_x, vector1_y, vector2_x, vector2_y, result;
+	int A_pos;
+	int inner_product;
+	int i;
+
+	for (i = 0; i < 3; i++)
+		scanf("%d%d", &pos_x[i], &pos_y[i]);
+
+	/* i 과정 */
+	while (1) {
+		vector1_x = pos_x[0] - pos_x[1];
+		vector1_y = pos_y[0] - pos_y[1];
+		vector2_x = pos_x[0] - pos_x[2];
+		vector2_y = pos_y[0] - pos_y[2];
+		inner_product = (vector1_x * vector2_x) + (vector1_y * vector2_y);
+		if (inner_product == 0) {
+			A_pos = 0;
+			break;
+		}
+
+		vector1_x = pos_x[1] - pos_x[0];
+		vector1_y = pos_y[1] - pos_y[0];
+		vector2_x = pos_x[1] - pos_x[2];
+		vector2_y = pos_y[1] - pos_y[2];
+		inner_product = (vector1_x * vector2_x) + (vector1_y * vector2_y);
+		if (inner_product == 0) {
+			A_pos = 1;
+			break;
+		}
+
+		vector1_x = pos_x[2] - pos_x[0];
+		vector1_y = pos_y[2] - pos_y[0];
+		vector2_x = pos_x[2] - pos_x[1];
+		vector2_y = pos_y[2] - pos_y[1];
+		inner_product = (vector1_x * vector2_x) + (vector1_y * vector2_y);
+		if (inner_product == 0) {
+			A_pos = 2;
+			break;
+		}
+
+		printf("직사각형을 만들 수 없습니다!\n");
+		break;
+	}
+
+	/* ii 과정 */
+	fourth_x = pos_x[0] + pos_x[1] + pos_x[2] - 2 * pos_x[A_pos];
+	fourth_y = pos_y[0] + pos_y[1] + pos_y[2] - 2 * pos_y[A_pos];
+
+	printf("%d %d\n", fourth_x, fourth_y);
+}
+
+int math2Problem8() {
+	int pos_x[3], pos_y[3];
+	int fourth_x, fourth_y;
+	int i;
+	
+	for (i = 0; i < 3; i++)
+		scanf("%d%d", &pos_x[i], &pos_y[i]);
+
+	fourth_x = (pos_x[0] == pos_x[1]) ? pos_x[2] : (pos_x[0] == pos_x[2]) ? pos_x[1] : pos_x[0];
+	fourth_y = (pos_y[0] == pos_y[1]) ? pos_y[2] : (pos_y[0] == pos_y[2]) ? pos_y[1] : pos_y[0];
+
+	printf("%d %d\n",fourth_x, fourth_y);
+}
+
+int math2Problem7() {
+	int pos_x, pos_y, horizon, vertical;
+	int horizon_min, vertical_min, result;
+	scanf("%d%d%d%d", &pos_x, &pos_y, &horizon, &vertical);
+
+	/*가로(너비) 최소 거리 구하기*/
+	horizon_min = pos_x < (horizon - pos_x) ? pos_x : (horizon - pos_x);
+	/*세로(높이) 최소 거리 구하기*/
+	vertical_min = pos_y < (vertical - pos_y) ? pos_y : (vertical - pos_y);
+	/*구한 최소 거리중 더 작은 값 구하기*/
+	result = horizon_min < vertical_min ? horizon_min : vertical_min;
+
+	printf("%d\n", result);
 }
 
 bool check_prime(int num) {
@@ -27,7 +201,7 @@ bool check_prime(int num) {
 	return true;
 }
 
-int math2Problem5() {
+int math2Problem6() {
 	int test_case;
 	int input_num, little_prime, big_prime;
 	int i, j;
@@ -59,7 +233,7 @@ int math2Problem5() {
 	}
 }
 
-int math2Problem4() {
+int math2Problem5() {
 	int input_num, result;
 	int i, j, flag;
 	float sqrt_i;
@@ -107,7 +281,7 @@ int math2Problem4() {
 	}
 }
 
-int math2Problem3() {
+int math2Problem4() {
 	int start, end;
 	int result;
 	int i, j, flag;
@@ -135,6 +309,33 @@ int math2Problem3() {
 		if (flag == 1)
 			continue;
 		printf("%d\n", i);
+	}
+}
+
+int math2Problem3() {
+	int input;
+	float sqrt_input;
+	int i, flag;
+
+	scanf("%d", &input);
+	while (input != 1) {
+		sqrt_input = sqrt((double)input);
+		flag = 0;
+
+		for (i = 2; i <= sqrt_input; i++) {
+			if (input % i == 0) {
+				input = input / i;
+				printf("%d\n", i);
+				flag = 1;
+				break;
+			}
+		}
+
+		if (flag == 1)
+			continue;
+
+		printf("%d\n", input);
+		input = 1;
 	}
 }
 

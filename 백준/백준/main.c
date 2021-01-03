@@ -72,14 +72,29 @@ int main()
 	//math1PRoblem5(); // 달팽이 올라가는 문제, 한 줄로 풀기 실패해서 결국 다른 사람 풀이 참고함(자존심 상함)
 	//math1Problem6();
 	//math1Problem7(); //파스칼 삼각형 문제
-	math1Problem8(); // 큰 수 A + B
+	//math1Problem8(); // 큰 수 A + B
 	//math1Problem9(); // 알파 센타우리 문제
 
 	//math2Problem1(); //1은 소수가 아니다 2는 소수이다 해당수의 루트까지만 구하면 빅오를 루트N까지 절약 가능하다!
 	//math2Problem2();
-	//math2Problem3();
-	//math2Problem4(); //베르트랑 공준 문제 (n과 2n 사이엔 적어도 하나의 소수가 존재한다는 이론)
-	//math2Problem5(); //골드바흐 가설 문제 (2보다 큰 모든 짝수는 소수의 합으로 표현 가능하다)
+	//math2Problem3(); //소인수 분해
+	//math2Problem4();
+	//math2Problem5(); //베르트랑 공준 문제 (n과 2n 사이엔 적어도 하나의 소수가 존재한다는 이론)
+	//math2Problem6(); //골드바흐 가설 문제 (2보다 큰 모든 짝수는 소수의 합으로 표현 가능하다)
+	//math2Problem7();
+	//math2Problem8(); // 직사각형 네번째 점 찍기 (축이랑 평행으로 주어져서 쉬움)
+	//math2Problem8ver2(); // 만약 대각으로 주어지면 어떻게 풀래?
+	//math2Problem9();
+	//math2Problem10(); //원 넓이 구하는 문제, float 쓰면 안되는 듯 함
+	//math2Problem11(); // 두 원의 위치 관계, r1 - r2 < d < r1 + r2
+
+	//recursiveProblem1(); //팩토리얼 재귀함수 풀이
+	//recursiveProblem2(); //피보나치 재귀함수 풀이
+	recursiveProblem3(); // 재귀를 이용한 별찍기(프랙탈 구조), matrix 활용 해야함, 비슷한 문제 보면 헤메지 말 것!
+						 // + 스택 공간 늘리는 법 : 프로젝트 우클릭해서 설정 들어간 다음에 링커 -> 시스템 -> 스택 예약 크기 변경하면됨
+						 // + 바이트 단위라 10MB로 설정하고 싶으면, 10^7 입력해야함, 디폴트는 1MB로 되어 있음
+
+
 
 }
 
