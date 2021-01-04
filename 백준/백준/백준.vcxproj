@@ -149,6 +149,7 @@
     <ClCompile Include="03_for문.c" />
     <ClCompile Include="02_if문.c" />
     <ClCompile Include="10_재귀.c" />
+    <ClCompile Include="11_브루트포스.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="04_while문.c" />
     <ClCompile Include="07_문자열.c" />
@@ -157,6 +158,7 @@
     <ClCompile Include="12_정렬.c" />
     <ClCompile Include="06_함수.c" />
     <ClCompile Include="실험실.c" />
+    <ClCompile Include="실험실.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

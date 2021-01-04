@@ -54,5 +54,11 @@
     <ClCompile Include="10_재귀.c">
       <Filter>리소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="11_브루트포스.c">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="실험실.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
