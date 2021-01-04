@@ -1,5 +1,31 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdlib.h>
+#include <math.h>
+
+int hanoiTower(int block_num, int pos, int via, int target) {
+	if (block_num == 1)
+		printf("%d %d\n", pos, target);
+	else {
+		hanoiTower(block_num - 1, pos, target, via);
+		printf("%d %d\n", pos, target);
+		hanoiTower(block_num - 1, via, pos, target);
+	}
+}
+
+int recursiveProblem4() {
+	int block_num, move_num = 1;
+	int i;
+
+	scanf("%d", &block_num);
+
+	for (i = 0; i < block_num; i++)
+		move_num = move_num * 2;
+	move_num = move_num - 1;
+
+	printf("%d\n", move_num);
+
+	hanoiTower(block_num, 1, 2, 3);
+}
 
 void recursiveStar(int x, int y, int size, char matrix[][2187]) {
 	int i, j;
