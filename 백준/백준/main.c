@@ -96,6 +96,8 @@ int main()
 	//recursiveProblem4(); //하노이 탑 재귀 문제, 힌트를 너무 많이 받음 다시 생각해 볼 필요가 있음
 
 	//bruteforceProblem1(); //블랙잭 문제
-	bruteforceProblem2(); //분해합 문제
+	//bruteforceProblem2(); //분해합 문제
+	//bruteforceProblem3(); //덩치 문제
+	bruteforceProblem4(); //체스판 다시 칠하기 문제
 }
 

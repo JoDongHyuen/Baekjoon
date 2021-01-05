@@ -1,6 +1,75 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <stdbool.h>
+
+int bruteforceProblem4() {
+	char chess_board[49][49];
+	int i, j, k, l;
+	int row, col;
+	int min = 2501;
+	int W_std_count, B_std_count;
+
+	scanf("%d%d", &row, &col);
+
+	for (i = 0; i < row; i++)
+		for (j = 0; j < col; j++)
+			scanf(" %c", &chess_board[i][j]);
+
+	/*맨 위, 오른쪽의 색깔(기준)이 고정되어 있다고 생각해서 한 번 틀림
+	 * 기준을 바꿔칠할 경우도 카운트 해주어야함*/
+	for (i = 0; i <= row - 8; i++)
+		for (j = 0; j <= col - 8; j++) {
+			W_std_count = 0;
+			B_std_count = 0;
+			if (chess_board[i][j] == 'B') {
+				for (k = i; k < i + 8; k = k++)
+					for (l = j; l < j + 8; l++)
+						if ((k + l) % 2 == 0 && chess_board[k][l] == 'W')
+							count++;
+						else if ((k + l) % 2 == 1 && chess_board[k][l] == 'B')
+							count++;
+			}
+			else if (chess_board[i][j] == 'W') {
+				for (k = i; k < i + 8; k++)
+					for (l = j; l < j + 8; l++)
+						if ((k + l) % 2 == 0 && chess_board[k][l] == 'B')
+							count++;
+						else if ((k + l) % 2 == 1 && chess_board[k][l] == 'W')
+							count++;
+			}
+
+			if (count < min)
+				min = count;
+		}
+
+	printf("%d\n", min);
+	/*
+	for (i = 0; i < row; i++) {
+		for (j = 0; j < col; j++)
+			printf("%c", chess_board[i][j]);
+		printf("\n");
+	}*/
+}
+
+int bruteforceProblem3() {
+	int person_num, kg[50] = { 0 }, cm[50] = { 0 };
+	int i, j , count;
+
+	scanf("%d", &person_num);
+
+	for (i = 0; i < person_num; i++)
+		scanf(" %d%d", &kg[i], &cm[i]);
+
+	for (i = 0; i < person_num; i++) {
+		count = 0;
+		for (j = 0; j < person_num; j++)
+			if (i != j && kg[i] < kg[j] && cm[i] < cm[j]) {
+				count++;
+			}
+		printf("%d ", count + 1);
+	}
+}
 
 int bruteforceProblem2() {
 	char str[8];
