@@ -2,6 +2,7 @@
 
 int main()
 {
+	//plus_speed_test();
 	//test_atoi();
 	//star1();
 

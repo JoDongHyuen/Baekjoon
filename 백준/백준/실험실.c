@@ -1,5 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+int plus_speed_test() {
+	int i = 0;
+
+	while (1)
+		printf("%d\n", i++);
+}
 int test_atoi() {
 	char *str = "213";
 	int num;

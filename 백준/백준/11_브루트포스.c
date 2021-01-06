@@ -1,13 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include <string.h>
 #include <stdbool.h>
 
 int bruteforceProblem5() {
 	int input;
+	int count = 0, i = 655;
+	char str[100];
+	char *ptr;
 	scanf("%d", &input);
 
-	printf("%d\n", (input - 1) * 1000 + 666);
+	while (true) {
+		i++;
+		//itoa(i, str, 10);
+		sprintf(str, "%d", i);
+		ptr = strstr(str, "666");
+		if (ptr != NULL)
+			count++;
+		if (count == input)
+			break;
+	}
+	printf("%d\n", i);
 }
 
 int bruteforceProblem4() {
