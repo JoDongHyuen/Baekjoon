@@ -98,6 +98,7 @@ int main()
 	//bruteforceProblem1(); //블랙잭 문제
 	//bruteforceProblem2(); //분해합 문제
 	//bruteforceProblem3(); //덩치 문제
-	bruteforceProblem4(); //체스판 다시 칠하기 문제
+	//bruteforceProblem4(); //체스판 다시 칠하기 문제, 문제에 대해 다양한 반례를 떠올리는 역량을 길러야 할 듯
+	bruteforceProblem5();
 }
 

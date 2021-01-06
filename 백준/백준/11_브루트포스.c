@@ -3,48 +3,61 @@
 #include <string.h>
 #include <stdbool.h>
 
+int bruteforceProblem5() {
+	int input;
+	scanf("%d", &input);
+
+	printf("%d\n", (input - 1) * 1000 + 666);
+}
+
 int bruteforceProblem4() {
-	char chess_board[49][49];
-	int i, j, k, l;
+	char chess_board[51][51];
+	int i, j, a, b;
 	int row, col;
-	int min = 2501;
+	int min = 2501, min_std;
 	int W_std_count, B_std_count;
 
 	scanf("%d%d", &row, &col);
 
 	for (i = 0; i < row; i++)
-		for (j = 0; j < col; j++)
-			scanf(" %c", &chess_board[i][j]);
+			scanf("%s", &chess_board[i]);
 
 	/*맨 위, 오른쪽의 색깔(기준)이 고정되어 있다고 생각해서 한 번 틀림
-	 * 기준을 바꿔칠할 경우도 카운트 해주어야함*/
+	 * 기준을 바꿔서 색칠할 경우도 카운트 해주어야함*/
 	for (i = 0; i <= row - 8; i++)
 		for (j = 0; j <= col - 8; j++) {
 			W_std_count = 0;
 			B_std_count = 0;
-			if (chess_board[i][j] == 'B') {
-				for (k = i; k < i + 8; k = k++)
-					for (l = j; l < j + 8; l++)
-						if ((k + l) % 2 == 0 && chess_board[k][l] == 'W')
-							count++;
-						else if ((k + l) % 2 == 1 && chess_board[k][l] == 'B')
-							count++;
-			}
-			else if (chess_board[i][j] == 'W') {
-				for (k = i; k < i + 8; k++)
-					for (l = j; l < j + 8; l++)
-						if ((k + l) % 2 == 0 && chess_board[k][l] == 'B')
-							count++;
-						else if ((k + l) % 2 == 1 && chess_board[k][l] == 'W')
-							count++;
-			}
+			for (a = i; a < i + 8; a++)
+				for (b = j; b < j + 8; b++)
+				{
+					/*기준이 B인 경우*/
+					if ((a + b) % 2 == 0 && chess_board[a][b] == 'W')
+						B_std_count++;
+					else if ((a + b) % 2 == 1 && chess_board[a][b] == 'B')
+						B_std_count++;
 
-			if (count < min)
-				min = count;
+					/*기준이 W인 경우*/
+					if ((a + b) % 2 == 0 && chess_board[a][b] == 'B')
+						W_std_count++;
+					else if ((a + b) % 2 == 1 && chess_board[a][b] == 'W')
+						W_std_count++;
+				}
+
+
+			//min_std = (W_std_count < B_std_count) ? W_std_count : B_std_count;
+			if (W_std_count < B_std_count)
+				min_std = W_std_count;
+			else
+				min_std = B_std_count;
+
+			if (min_std < min)
+				min = min_std;
 		}
 
 	printf("%d\n", min);
-	/*
+
+	/* 체스판 제대로 받아오는지 체크하기 위한 부분
 	for (i = 0; i < row; i++) {
 		for (j = 0; j < col; j++)
 			printf("%c", chess_board[i][j]);
