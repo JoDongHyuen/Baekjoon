@@ -45,6 +45,7 @@ int bruteforceProblem4() {
 				}
 
 
+			// ! 여기서 추가적인 아이디어 W_std_count + B_std_count = 64임, 체스판이 8*8이고 경우의 수가 2가지이기 때문에
 			//min_std = (W_std_count < B_std_count) ? W_std_count : B_std_count;
 			if (W_std_count < B_std_count)
 				min_std = W_std_count;
