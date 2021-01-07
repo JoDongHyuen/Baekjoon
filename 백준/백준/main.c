@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main()
-{
+int main(){
+
 	//plus_speed_test();
 	//test_atoi();
 	//star1();
@@ -100,6 +100,8 @@ int main()
 	//bruteforceProblem2(); //분해합 문제
 	//bruteforceProblem3(); //덩치 문제
 	//bruteforceProblem4(); //체스판 다시 칠하기 문제, 문제에 대해 다양한 반례를 떠올리는 역량을 길러야 할 듯
-	bruteforceProblem5();
+	//bruteforceProblem5(); //영화감독 숌 문제
+
+	sortProblem1();
 }
 
