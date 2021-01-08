@@ -102,6 +102,7 @@ int main(){
 	//bruteforceProblem4(); //체스판 다시 칠하기 문제, 문제에 대해 다양한 반례를 떠올리는 역량을 길러야 할 듯
 	//bruteforceProblem5(); //영화감독 숌 문제
 
-	sortProblem1();
+	//sortProblem1verSelection(); //선택 정렬
+	sortProblem1verBubble(); //버블 정렬
 }
 
