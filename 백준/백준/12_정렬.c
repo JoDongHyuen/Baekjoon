@@ -1,11 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int sortProblem1verInsertion()
 {
 	/* 삽입 정렬 */
-	/*  */
+	/*  n번째 값을 선택해서 그 앞에 있는 값들과 비교해 n번째의 값이 들어갈 자리를 오름차순 혹은 내림차순에 맞게 찾은 후 삽입함
+	 * 위 과정을 졍렬할 숫자의 - 1 만큼 시행하면 됨*/
 	/* Best의 경우 O(n) = N 하지만 평균, 최악의 경우 O(n) = N^2 임 */
+
+	int number_num, i, j;
+	int num[1000], remember, temp;
+
+	scanf("%d", &number_num);
+
+	for (i = 0; i < number_num; i++)
+		scanf("%d", &num[i]);
+
+	/*실질적으로 정렬하는 부분, index 값 설정하는 부분 유의 깊게 볼 것*/
+	for (i = 1; i < number_num; i++) {
+		remember = num[(j = i)];
+		while (j > 0) {
+			if (num[j - 1] < remember) break;
+			else {
+				//num[j] = num[j - 1];
+				j--;
+			}
+		}
+		if (j == i) continue;
+		//memcpy(num + j + 1, num + j, sizeof(int) * (i - j));
+		//위처럼 memcpy의 읽기와 쓰기의 영역이 겹치게 된다면 결과를 정의할 수 없음
+		//즉, 내가 테스트를 해서 올바른 결과가 출력되더라도 judge사이트에선 틀릴 수 있다는 말임
+		
+		//memmove를 사용했을 땐, online judge에서 통과가 되었음, 그럼 그 차이점이 무엇일까?
+		//차이점은 바로 버퍼의 사용 유무임, memmove의 경우 버퍼를 사용하기 때문에 안정성이 있어서
+		//online judge에서 통과된 듯 함
+		memmove(num + j + 1, num + j, sizeof(int) * (i - j));
+		num[j] = remember;
+	}
+
+
+	for (i = 0; i < number_num; i++)
+		printf("%d\n", num[i]);
 }
 
 int sortProblem1verBubble()

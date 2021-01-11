@@ -1,5 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+int memcpy_test() {
+	int a[] = { 1, 2, 3, 4, 5 };
+	int i;
+
+	memcpy(a, a + 1, sizeof(int) * 4);
+
+	for (i = 0; i < 5; i++)
+		printf("%d ", a[i]); //2 2 3 4 5 °¡ Ãâ·ÂµÊ
+}
 
 int plus_speed_test() {
 	int i = 0;

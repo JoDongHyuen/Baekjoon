@@ -2,6 +2,7 @@
 
 int main(){
 
+	//memcpy_test();
 	//plus_speed_test();
 	//test_atoi();
 	//star1();
@@ -103,6 +104,7 @@ int main(){
 	//bruteforceProblem5(); //영화감독 숌 문제
 
 	//sortProblem1verSelection(); //선택 정렬
-	sortProblem1verBubble(); //버블 정렬
+	//sortProblem1verBubble(); //버블 정렬
+	sortProblem1verInsertion(); //삽입 정렬
 }
 
