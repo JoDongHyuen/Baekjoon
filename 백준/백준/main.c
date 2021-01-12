@@ -105,6 +105,7 @@ int main(){
 
 	//sortProblem1verSelection(); //선택 정렬
 	//sortProblem1verBubble(); //버블 정렬
-	sortProblem1verInsertion(); //삽입 정렬
+	//sortProblem1verInsertion(); //삽입 정렬
+	sortProblem2verQuick(); //퀵정렬
 }
 

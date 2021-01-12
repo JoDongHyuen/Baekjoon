@@ -2,6 +2,65 @@
 #include <stdlib.h>
 #include <string.h>
 
+int Quick_sort(int start, int end, int arr[])
+{
+	/*1학년 때 못 짠 기억이 있었는데, 지금 다시 보니 굉장히 쉽게 짰음, 성취감 굿*/
+
+	int pivot, low, high, temp;
+	pivot = start;
+
+	if (start >= end)
+		return;
+	else
+	{
+		low = start + 1;
+		high = end;
+
+		while (low <= high) {
+			while (1)
+				if (arr[pivot] > arr[low])
+					low++;
+				else
+					break;
+
+			while (1)
+				if (arr[pivot] < arr[high])
+					high--;
+				else
+					break;
+
+			if (low < high) {
+				temp = arr[low];
+				arr[low] = arr[high];
+				arr[high] = temp;
+			}
+		}
+
+		temp = arr[high];
+		arr[high] = arr[pivot];
+		arr[pivot] = temp;
+		pivot = high;
+	}
+	Quick_sort(0, pivot - 1, arr);
+	Quick_sort(pivot + 1, end, arr);
+}
+
+int sortProblem2verQuick()
+{
+	int num[1000000] = { 0 };
+	int number_num, i;
+
+	scanf("%d", &number_num);
+
+	for (i = 0; i < number_num; i++)
+		scanf("%d", &num[i]);
+
+	Quick_sort(0, number_num - 1, num);
+
+	for (i = 0; i < number_num; i++)
+		printf("%d\n", num[i]);
+}
+
 int sortProblem1verInsertion()
 {
 	/* 삽입 정렬 */
