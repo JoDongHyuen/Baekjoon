@@ -2,21 +2,53 @@
 #include <stdlib.h>
 #include <string.h>
 
+int sortProblem3()
+{
+	/* O(n + k) 라고함, 크기가 큰 값이 있을 경우 비효율적임 */
+	int count[10001] = { 0 };
+	int sort_result[10000000] = { 0 };
+	int i, j, number_num, number, max = 0;
+
+	scanf("%d", &number_num);
+
+	/*숫자를 카운팅하는 파트*/
+	for (i = 0; i < number_num; i++) {
+		scanf("%d", &number);
+		/*계수 정렬에 원래 비교는 쓰지 않음*/
+		/*단지 속도를 위해 추가한 부분임*/
+		if (max < number)
+			max = number;
+		count[number]++;
+	}
+
+	//for (i = 0; i < max; i++)
+	//	count[i + 1] = count[i] + count[i + 1];
+
+	/*  카운팅 결과를 출력하는 부분, 아니면 배열을 따로 만들어서 결과를 넣어줘도 됨*/
+	for (i = 0; i <= max; i++) {
+		if (count[i] != 0)
+			for (j = 0; j < count[i]; j++)
+				printf("%d\n", i);
+	}
+
+}
+
 int Quick_sort(int start, int end, int arr[])
 {
 	/*1학년 때 못 짠 기억이 있었는데, 지금 다시 보니 굉장히 쉽게 짰음, 성취감 굿*/
 
 	int pivot, low, high, temp;
-	pivot = start;
-
+	//pivot = start;
+	pivot = (start + end) / 2;
 	if (start >= end)
 		return;
 	else
 	{
-		low = start + 1;
+		//low = start + 1;
+		low = start;
 		high = end;
 
-		while (low <= high) {
+		while (low < high) { //중앙 값을 pivot으로 쓰기위해 low <= high 에서 low < high로 변경
 			while (1)
 				if (arr[pivot] > arr[low])
 					low++;
