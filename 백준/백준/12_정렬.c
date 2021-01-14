@@ -1,6 +1,64 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
+
+int Quick_sort_problem5(int start, int end, int arr[])
+{
+	int pivot, high, low ,pivot_pos;
+	int pivot_value;
+	int i, j, temp;
+
+	if (start < end)
+	{
+		pivot = arr[start];
+		//pivot = arr[pivot_pos = (start + end) / 2];
+		low = start;
+		high = end;
+		while (true) {
+			while (arr[low] > pivot && low < end)
+				low++;
+			while (arr[high] < pivot && high > start)
+				high--;
+			
+			if (low >=high)
+				break;
+			temp = arr[high];
+			arr[high] = arr[low];
+			arr[low] = temp;
+			low++;
+			high--;
+		}
+		/*pivot이 start와 end 범위 사이에 있으면 이 부분이 필요 없음!!!!*/
+		/*
+		temp = pivot;
+		arr[pivot_pos] = arr[high];
+		arr[high] = temp;
+		*/
+
+		Quick_sort_problem5(start, high - 1, arr);
+		Quick_sort_problem5(high + 1, end, arr);
+	}
+}
+
+int sortProblem5()
+{
+	char input[11];
+	int arr[10];
+	int i, len;
+
+	scanf("%s", input);
+
+	len = strlen(input);
+
+	for (i = 0; i < len; i++)
+		arr[i] = input[i] - 48;
+
+	Quick_sort_problem5(0, len - 1, arr);
+
+	for (i = 0; i < len; i++)
+		printf("%d", arr[i]);
+}
 
 int sortProblem4()
 {
@@ -110,17 +168,17 @@ int Quick_sort(int start, int end, int arr[])
 	/*1학년 때 못 짠 기억이 있었는데, 지금 다시 보니 굉장히 쉽게 짰음, 성취감 굿*/
 
 	int pivot, low, high, temp;
-	//pivot = start;
-	pivot = (start + end) / 2;
+	pivot = start;
+	//pivot = (start + end) / 2;
 	if (start >= end)
 		return;
 	else
 	{
-		//low = start + 1;
-		low = start;
+		low = start + 1;
+		//low = start;
 		high = end;
 
-		while (low < high) { //중앙 값을 pivot으로 쓰기위해 low <= high 에서 low < high로 변경
+		while (low <= high) { //중앙 값을 pivot으로 쓰기위해 low <= high 에서 low < high로 변경
 			while (1)
 				if (arr[pivot] > arr[low])
 					low++;
