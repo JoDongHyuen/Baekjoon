@@ -2,6 +2,78 @@
 #include <stdlib.h>
 #include <string.h>
 
+int sortProblem4()
+{
+	int plus_count[4001] = { 0 };
+	int minus_count[4001] = { 0 };
+	int sort_result[500000], order = 0;
+	int freq[2] = { -4001, -4001 }, freq_count = 0;
+	int i, j, number_num, input, sum = 0;
+	int mid, range;
+	int max_freq = 0;
+	//float mean;
+	double mean;
+
+	scanf("%d", &number_num);
+
+	/*계수 정렬로 카운팅을 하며, 최빈값 M이 N의 빈도를 가질 때 N을 구해주는 작업을 병행함*/
+	for (i = 0; i < number_num; i++) {
+		scanf("%d", &input);
+		
+		/*음수 카운팅하는 부분*/
+		if (input < 0) {
+			minus_count[-input]++;
+			
+			/*N을 구하는 부분*/
+			if (max_freq < minus_count[-input])
+				max_freq = minus_count[-input];
+		}
+		
+		/*양수 카운팅 하는 부분*/
+		else {
+			plus_count[input]++;
+			
+			/*N을 구하는 부분*/
+			if (max_freq < plus_count[input])
+				max_freq = plus_count[input];
+		}
+
+		/*평균을 내기 위해 합하는 부분*/
+		sum = sum + input;
+	}
+
+	for (i = 4000; i > 0; i--) {
+		/*카운팅한 음수를 배열에 넣는 부분*/
+		for (j = 0; j < minus_count[i]; j++)
+			sort_result[order++] = -i;
+
+		/*  최빈값과 혹은 최빈값이 여러개일 때, 문제 조건에 맞게
+		 * 두 번째로 작은 최빈 값을 구해주는 부분*/
+		if (freq_count < 2 && max_freq == minus_count[i])
+			freq[freq_count++] = -i;
+	}
+
+	for (i = 0; i <= 4000; i++) {
+		/*카운팅한 양수를 배열에 넣는 부분*/
+		for (j = 0; j < plus_count[i]; j++)
+			sort_result[order++] = i;
+
+		/*  최빈값과 혹은 최빈값이 여러개일 때, 문제 조건에 맞게
+		* 두 번째로 작은 최빈 값을 구해주는 부분*/
+		if (freq_count < 2 && max_freq == plus_count[i])
+			freq[freq_count++] = i;
+	}
+
+	//mean = (float)sum / order;
+	mean = (double)(sum) / (double)order;
+	mid = order / 2;
+	range = sort_result[order - 1] - sort_result[0];
+	printf("%.0lf\n", mean);
+	printf("%d\n", sort_result[mid]);
+	printf("%d\n", freq_count > 1 ? freq[1] : freq[0]);
+ 	printf("%d\n", range);
+}
+
 int sortProblem3()
 {
 	/* O(n + k) 라고함, 크기가 큰 값이 있을 경우 비효율적임 */

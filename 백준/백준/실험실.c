@@ -2,6 +2,29 @@
 #include <stdlib.h>
 #include <string.h>
 
+int arr_minus_test() {
+
+	/*변수에 minus 붙여도 제대로 작동함*/
+	int a = -1;
+	int arr[2] = { 12, 34 };
+
+	printf("%d\n", arr[-a]);
+}
+
+int typecasting_test() {
+
+	int a = 10, b = 3;
+	float c;
+
+	/*정수끼리 나눠서 타입캐스팅 해봤자 소수점은 반영안됨*/
+	//c = (float)(a / b);
+
+	/*float를 정수로 나누면 소수점은 반영됨*/
+	c = (float)a / b;
+
+	printf("%f\n", c);
+}
+
 int memcpy_test() {
 	int a[] = { 1, 2, 3, 4, 5 };
 	int i;

@@ -2,6 +2,8 @@
 
 int main(){
 
+	//arr_minus_test();
+	//typecasting_test();
 	//memcpy_test();
 	//plus_speed_test();
 	//test_atoi();
@@ -107,7 +109,7 @@ int main(){
 	//sortProblem1verBubble(); //버블 정렬
 	//sortProblem1verInsertion(); //삽입 정렬
 	//sortProblem2verQuick(); //퀵정렬
-	sortProblem3(); // 계수 정렬 (counting sort)
-
+	//sortProblem3(); // 계수 정렬 (counting sort)
+	sortProblem4();
 }
 
