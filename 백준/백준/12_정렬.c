@@ -5,45 +5,43 @@
 
 int Quick_sort_problem5(int start, int end, int arr[])
 {
-	int pivot, high, low ,pivot_pos;
-	int pivot_value;
+	int pivot, high, low;
 	int i, j, temp;
 
+	pivot = start;
+	low = start;
+	high = end + 1;
 	if (start < end)
 	{
-		pivot = arr[start];
-		//pivot = arr[pivot_pos = (start + end) / 2];
-		low = start;
-		high = end;
 		while (true) {
-			while (arr[low] > pivot && low < end)
-				low++;
-			while (arr[high] < pivot && high > start)
-				high--;
-			
-			if (low >=high)
+			while (arr[++low] > arr[pivot])
+				if (low == end)
+					break;
+			while (arr[--high] < arr[pivot])
+				if (high == start)
+					break;
+
+			if (low >= high)
 				break;
 			temp = arr[high];
 			arr[high] = arr[low];
 			arr[low] = temp;
-			low++;
-			high--;
 		}
-		/*pivot이 start와 end 범위 사이에 있으면 이 부분이 필요 없음!!!!*/
-		/*
-		temp = pivot;
-		arr[pivot_pos] = arr[high];
-		arr[high] = temp;
-		*/
 
-		Quick_sort_problem5(start, high - 1, arr);
-		Quick_sort_problem5(high + 1, end, arr);
+		temp = arr[pivot];
+		arr[pivot] = arr[high];
+		arr[high] = temp;
+		pivot = high;
+
+
+		Quick_sort_problem5(start, pivot - 1, arr);
+		Quick_sort_problem5(pivot + 1, end, arr);
 	}
 }
 
 int sortProblem5()
 {
-	char input[11];
+	char input[11] = { 0 };
 	int arr[10];
 	int i, len;
 
@@ -163,33 +161,37 @@ int sortProblem3()
 
 }
 
+void swap_sort(int arr[], int a, int b)
+{
+	int temp;
+	temp = arr[a];
+	arr[a] = arr[b];
+	arr[b] = temp;
+}
+
 int Quick_sort(int start, int end, int arr[])
 {
-	/*1학년 때 못 짠 기억이 있었는데, 지금 다시 보니 굉장히 쉽게 짰음, 성취감 굿*/
-
-	int pivot, low, high, temp;
+	int pivot, low, high, temp, mid;
 	pivot = start;
-	//pivot = (start + end) / 2;
+	mid = (start + end) / 2;
 	if (start >= end)
 		return;
 	else
 	{
+		if (arr[start] > arr[mid]) swap(arr, start, mid);
 		low = start + 1;
-		//low = start;
 		high = end;
 
-		while (low <= high) { //중앙 값을 pivot으로 쓰기위해 low <= high 에서 low < high로 변경
-			while (1)
-				if (arr[pivot] > arr[low])
-					low++;
-				else
-					break;
+		while (1) {
+			while (arr[pivot] > arr[low] && low < end)
+				low++;
+				
 
-			while (1)
-				if (arr[pivot] < arr[high])
-					high--;
-				else
-					break;
+			while (arr[pivot] < arr[high] && high > start)
+				high--;
+
+			if (low >= high)
+				break;
 
 			if (low < high) {
 				temp = arr[low];
