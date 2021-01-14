@@ -3,6 +3,16 @@
 #include <string.h>
 #include <stdbool.h>
 
+typedef struct _cordinate {
+	int x;
+	int y;
+}cordinate;
+
+int sortProblem6()
+{
+
+}
+
 int Quick_sort_problem5(int start, int end, int arr[])
 {
 	int pivot, high, low;
@@ -161,6 +171,59 @@ int sortProblem3()
 
 }
 
+int Merge(int arr[], int temp[], int start, int mid, int end)
+{
+	int i;
+	int index = start;
+	int part1, part2;
+
+	for (i = start; i <= end; i++)
+		temp[i] = arr[i];
+
+	part1 = start;
+	part2 = mid + 1;
+
+	while (part1 <= mid && part2 <= end) {
+		if (temp[part1] < temp[part2])
+			arr[index++] = temp[part1++];
+		else
+			arr[index++] = temp[part2++];
+	}
+
+	//이렇게 했다가 한 번 틀림!!! i는 인덱스 위치고 mid - part1은 남은 숫자 개수인데
+	//저렇게하면 당연히 틀리지...!
+	//for (i = part1; i <= mid - part1; i++)
+	//	arr[index++] = temp[i];
+
+	/*뒤쪽 부분이 먼저 비었을 경우*/
+	for (i = 0; i <= mid - part1; i++)
+		arr[index + i] = temp[part1 + i];
+
+
+}
+
+int MergeSort(int arr[], int temp[], int start, int end)
+{
+	int mid = (start + end) / 2;
+	if (start < end) {
+		MergeSort(arr, temp, start, mid);
+		MergeSort(arr, temp, mid + 1, end);
+		Merge(arr, temp, start, mid, end);
+	}
+}
+
+int sortProblem2verMerge()
+{
+	int arr[1000000] = { 7,62,0,1,2,2,1,0,62 };
+	int temp[1000000];
+	int i;
+
+	MergeSort(arr, temp, 0, 8);
+	
+	for (i = 0; i < 9; i++)
+		printf("%d ", arr[i]);
+}
+
 void swap_sort(int arr[], int a, int b)
 {
 	int temp;
@@ -171,23 +234,35 @@ void swap_sort(int arr[], int a, int b)
 
 int Quick_sort(int start, int end, int arr[])
 {
-	int pivot, low, high, temp, mid;
-	pivot = start;
-	mid = (start + end) / 2;
+	int pivot, low, high, temp, mid, pivot_value;
+
 	if (start >= end)
 		return;
 	else
 	{
-		if (arr[start] > arr[mid]) swap(arr, start, mid);
-		low = start + 1;
-		high = end;
+		/* 76%에서 시간 초과남*/
+		/*
+		if (arr[end] < arr[mid]) swap_sort(arr, end, mid);
+		if (arr[end] < arr[start]) swap_sort(arr, end, start);
+		if (arr[start] < arr[mid]) swap_sort(arr, start, mid);
+		*/
+		
+		
+		//pivot = start;
 
+		mid = (start + end) / 2;
+		pivot = mid;
+		pivot_value = arr[mid];
+
+		//low = start + 1;
+		low = start;
+		high = end;
 		while (1) {
-			while (arr[pivot] > arr[low] && low < end)
+			while (pivot_value > arr[low] && low < end)
 				low++;
 				
 
-			while (arr[pivot] < arr[high] && high > start)
+			while (pivot_value < arr[high] && high > start)
 				high--;
 
 			if (low >= high)
@@ -197,16 +272,20 @@ int Quick_sort(int start, int end, int arr[])
 				temp = arr[low];
 				arr[low] = arr[high];
 				arr[high] = temp;
+				low++;
+				high--;
 			}
 		}
-
+		/*
 		temp = arr[high];
 		arr[high] = arr[pivot];
 		arr[pivot] = temp;
-		pivot = high;
+		*/
 	}
-	Quick_sort(0, pivot - 1, arr);
-	Quick_sort(pivot + 1, end, arr);
+	if (high > 1)
+		Quick_sort(start, high - 1, arr);
+	if (high < end - 1)
+		Quick_sort(high + 1, end, arr);
 }
 
 int sortProblem2verQuick()
