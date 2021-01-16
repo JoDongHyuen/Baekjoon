@@ -150,6 +150,7 @@
     <ClCompile Include="02_if문.c" />
     <ClCompile Include="10_재귀.c" />
     <ClCompile Include="11_브루트포스.c" />
+    <ClCompile Include="class_01.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="04_while문.c" />
     <ClCompile Include="07_문자열.c" />

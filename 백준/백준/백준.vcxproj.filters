@@ -60,5 +60,8 @@
     <ClCompile Include="실험실.cpp">
       <Filter>리소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="class_01.c">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

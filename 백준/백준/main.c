@@ -2,6 +2,8 @@
 
 int main(){
 
+	class1Problem2();
+
 	//arr_minus_test();
 	//typecasting_test();
 	//memcpy_test();
@@ -109,7 +111,7 @@ int main(){
 	//sortProblem1verBubble(); //버블 정렬
 	//sortProblem1verInsertion(); //삽입 정렬
 	//sortProblem2verQuick(); //퀵정렬 //오류 존재
-	sortProblem2verMerge();
+	//sortProblem2verMerge();
 	//sortProblem3(); // 계수 정렬 (counting sort)
 	//sortProblem4(); // 통계학 문제 (counting sort로 해결)
 	//sortProblem5(); // digit 정렬 문제 (quick sort로 해결)
