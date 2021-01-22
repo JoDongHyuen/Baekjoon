@@ -8,9 +8,60 @@ typedef struct _cordinate {
 	int y;
 }cordinate;
 
+void Problem6_x_sort(int start, int end, cordinate cordi[])
+{
+	int low, high, pivot_value;
+	cordinate temp;
+
+	if (start >= end)
+		return;
+	else
+	{
+		low = start;
+		high = end;
+		pivot_value = cordi[(low + high) / 2].x;
+		
+		while (low < high)
+		{
+			while (1)
+			{
+				if (cordi[low].x >= pivot_value || low >= end)
+					break;
+				else
+					low++;
+			}
+
+			while (1)
+			{
+				if (cordi[high].x <= pivot_value || high <= start)
+					break;
+				else
+					high--;
+			}
+			temp = cordi[high];
+			cordi[high] = cordi[low];
+			cordi[low] = temp;
+			low++;
+			high--;
+		}
+		Problem6_x_sort(start, high, cordi);
+		Problem6_x_sort(high + 1, end, cordi);
+	}
+}
+
 int sortProblem6()
 {
+	int test_case, input_x, input_y, i;
+	cordinate cordi[100000];
 
+	scanf(" %d", &test_case);
+	for (i = 0; i < test_case; i++) 
+		scanf(" %d%d", &cordi[i].x, &cordi[i].y);
+	
+	Problem6_x_sort(0, test_case - 1, cordi);
+
+	for (i = 0; i < test_case; i++)
+		printf("%d %d\n", cordi[i].x, cordi[i].y);
 }
 
 int Quick_sort_problem5(int start, int end, int arr[])

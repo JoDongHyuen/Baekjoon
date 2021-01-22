@@ -2,6 +2,26 @@
 #include <stdlib.h>
 #include <string.h>
 
+int plus_test(int a, int b)
+{
+	return a + b;
+}
+
+int plus_test_main()
+{
+	int a = 10, b = 20, c;
+	//c = plus_test(a++, b); // 결과는 30이다
+	c = plus_test(a + 1, b);
+	printf("%d\n", c);
+}
+
+int scanf_test() {
+	int arr[10];
+
+	scanf("%d", arr[2]);
+	scanf("%d", arr[1]);
+}
+
 int arr_minus_test() {
 
 	/*변수에 minus 붙여도 제대로 작동함*/

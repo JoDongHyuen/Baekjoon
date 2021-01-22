@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 int main(){
+	//class1Problem2();
 
-	class1Problem2();
-
+	//plus_test_main();
+	//scanf_test();
 	//arr_minus_test();
 	//typecasting_test();
 	//memcpy_test();
 	//plus_speed_test();
 	//test_atoi();
+	
 	//star1();
 
 	//basic1(); //각 변수들의 바이트 길이 체크
@@ -115,5 +117,6 @@ int main(){
 	//sortProblem3(); // 계수 정렬 (counting sort)
 	//sortProblem4(); // 통계학 문제 (counting sort로 해결)
 	//sortProblem5(); // digit 정렬 문제 (quick sort로 해결)
+	sortProblem6();
 }
 
