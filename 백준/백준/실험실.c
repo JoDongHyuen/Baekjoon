@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+int for_condition_text()
+{
+	int i, j = 10;
+
+	/*이렇게 조건문을 넣으면 몇번 프린트 될지 실험*/
+	for (i = 0; i < j - i; i++)
+		printf("%d 번째 프린트\n", i);
+	/*실험 결과 : 10번 프린트 되지 않음*/
+}
+
 int plus_test(int a, int b)
 {
 	return a + b;

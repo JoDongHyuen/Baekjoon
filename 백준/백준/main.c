@@ -10,6 +10,7 @@ int main(){
 	//memcpy_test();
 	//plus_speed_test();
 	//test_atoi();
+	//for_condition_text();
 	
 	//star1();
 

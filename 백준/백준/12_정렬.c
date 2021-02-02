@@ -8,9 +8,60 @@ typedef struct _cordinate {
 	int y;
 }cordinate;
 
+void Problem6_y_mergesort(int start, int mid, int end, cordinate cordi[], cordinate temp[])
+{
+	int arr_idx1, arr_idx2;
+	int cordi_idx = start;
+	int i;
+
+	arr_idx1 = start;
+	arr_idx2 = mid;
+	//temp = cordi; 이런 식으로 가면 temp에 cordi의 포인터가 들어가서 cordi 값이 변하면 temp 값도 같이 변함
+	for (i = start; i <= end; i++)
+		temp[i] = cordi[i];
+
+	while (arr_idx1 <= mid - 1 && arr_idx2 <= end)
+	{
+		if (temp[arr_idx1].y < temp[arr_idx2].y)
+		{
+			cordi[cordi_idx] = temp[arr_idx1];
+			arr_idx1++;
+			cordi_idx++;
+		}
+		else
+		{
+			cordi[cordi_idx] = temp[arr_idx2];
+			arr_idx2++;
+			cordi_idx++;
+		}
+	}
+
+	if (arr_idx1 < mid) {
+		for (i = 0; i < mid - arr_idx1; i++)
+		{
+			cordi[cordi_idx + i] = temp[arr_idx1 + i];
+		}
+	}
+}
+
+void Problem6_y_sort(int start, int end, cordinate cordi[], cordinate temp[])
+{
+	int mid;
+
+	if (start >= end)
+		return;
+	else
+	{
+		mid = (start + end) / 2;
+		Problem6_y_sort(start, mid, cordi, temp);
+		Problem6_y_sort(mid + 1, end, cordi, temp);
+		Problem6_y_mergesort(start, mid + 1, end, cordi, temp);
+	}
+}
+
 void Problem6_x_sort(int start, int end, cordinate cordi[])
 {
-	int low, high, pivot_value;
+	int low, high, pivot_value, pivot_pos;
 	cordinate temp;
 
 	if (start >= end)
@@ -20,7 +71,8 @@ void Problem6_x_sort(int start, int end, cordinate cordi[])
 		low = start;
 		high = end;
 		pivot_value = cordi[(low + high) / 2].x;
-		
+		pivot_pos = (low + high) / 2;
+
 		while (low < high)
 		{
 			while (1)
@@ -44,21 +96,34 @@ void Problem6_x_sort(int start, int end, cordinate cordi[])
 			low++;
 			high--;
 		}
-		Problem6_x_sort(start, high, cordi);
-		Problem6_x_sort(high + 1, end, cordi);
+		//Problem6_x_sort(start, high, cordi);
+		//Problem6_x_sort(high + 1, end, cordi); 이렇게 했을시에 정렬 제대로 안되었음
+		Problem6_x_sort(start, pivot_pos - 1, cordi);
+		Problem6_x_sort(pivot_pos + 1, end, cordi);
 	}
 }
 
 int sortProblem6()
 {
 	int test_case, input_x, input_y, i;
+	int start, end;
 	cordinate cordi[100000];
+	cordinate temp[100000];
 
 	scanf(" %d", &test_case);
 	for (i = 0; i < test_case; i++) 
 		scanf(" %d%d", &cordi[i].x, &cordi[i].y);
 	
 	Problem6_x_sort(0, test_case - 1, cordi);
+	start = 0;
+	end = 0;
+	for (i = 0; i < test_case - 1; i++) {
+		if (cordi[i].x == cordi[i + 1].x)
+			end++;
+		else {
+			Problem6_y_sort(0, test_case - 1, cordi, temp);
+		}
+	}
 
 	for (i = 0; i < test_case; i++)
 		printf("%d %d\n", cordi[i].x, cordi[i].y);
