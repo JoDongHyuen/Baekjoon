@@ -73,33 +73,22 @@ void Problem6_x_sort(int start, int end, cordinate cordi[])
 		pivot_value = cordi[(low + high) / 2].x;
 		pivot_pos = (low + high) / 2;
 
-		while (low < high)
+		while (low <= high)
 		{
-			while (1)
-			{
-				if (cordi[low].x >= pivot_value || low >= end)
-					break;
-				else
-					low++;
+			while (cordi[low].x < pivot_value) low++;
+			while (cordi[high].x > pivot_value) high--;
+			if (low <= high) {
+				temp = cordi[high];
+				cordi[high] = cordi[low];
+				cordi[low] = temp;
+				low++;
+				high--;
 			}
-
-			while (1)
-			{
-				if (cordi[high].x <= pivot_value || high <= start)
-					break;
-				else
-					high--;
-			}
-			temp = cordi[high];
-			cordi[high] = cordi[low];
-			cordi[low] = temp;
-			low++;
-			high--;
 		}
 		//Problem6_x_sort(start, high, cordi);
 		//Problem6_x_sort(high + 1, end, cordi); 이렇게 했을시에 정렬 제대로 안되었음
-		Problem6_x_sort(start, pivot_pos - 1, cordi);
-		Problem6_x_sort(pivot_pos + 1, end, cordi);
+		Problem6_x_sort(start, low - 1, cordi);
+		Problem6_x_sort(low, end, cordi);
 	}
 }
 
@@ -117,11 +106,15 @@ int sortProblem6()
 	Problem6_x_sort(0, test_case - 1, cordi);
 	start = 0;
 	end = 0;
-	for (i = 0; i < test_case - 1; i++) {
-		if (cordi[i].x == cordi[i + 1].x)
+	while(end < test_case)
+	{
+		if (cordi[end].x == cordi[end + 1].x) {
 			end++;
+		}
 		else {
-			Problem6_y_sort(0, test_case - 1, cordi, temp);
+			Problem6_y_sort(start, end, cordi, temp);
+			end++;
+			start = end;
 		}
 	}
 
