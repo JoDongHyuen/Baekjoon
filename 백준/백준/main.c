@@ -7,11 +7,16 @@ int main(){
 	//scanf_test();
 	//arr_minus_test();
 	//typecasting_test();
-	//memcpy_test();
+	//memcpy_test(); //memcpy와 memmove의 차이점
 	//plus_speed_test();
 	//test_atoi();
 	//for_condition_text();
-	
+	//arrpointer_test(); // 포인터에 대해 몰랐던 사실들
+	//pointer_test();
+	//pointer_test2();
+	//strcpy_test();
+	//char_pointer_test();
+
 	//star1();
 
 	//basic1(); //각 변수들의 바이트 길이 체크

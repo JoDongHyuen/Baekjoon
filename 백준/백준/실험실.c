@@ -2,6 +2,112 @@
 #include <stdlib.h>
 #include <string.h>
 
+int char_pointer_test()
+{
+	char str1[] = "Hello World";
+	char *str2 = "Hi C Language!";
+
+	//str = str + 1; // 얘는 실행 안됨
+	str2 = str2 + 1;
+
+	printf("%c", str1[0]);
+	//str2[0] = 'X'; // 얘는 컴파일 할 때 에러남
+
+	/* 여기서 알 수 있는 사실, char str1[]은 "포인터 상수"이고 "변수 형태의 문자열"이다!
+	 *						   char str2[]은 "포인터 변수"이고 "상수 형태의 문자열"이다! */
+}
+
+int strcpy_test()
+{
+	char str1[] = "Hello World";
+	char str2[] = "Hell World";
+
+	//str2 = str1;
+
+	strcpy(str2, str1);
+
+	//printf("%s", str2);  //str2에 \0가 사라져서 안되지렁~
+}
+
+int pointer_test2()
+{
+	int arr[3] = { 11, 22, 33 };
+	int *ptr = arr;
+	int i;
+
+	for (i = 0; i < 3; i++)
+		printf("%d ", arr[i]);
+	printf("\n");
+
+	printf("%x", &ptr[1]);
+	ptr[1] = 10;
+
+	//*(ptr + 1) = 20; // ptr + 1한 값을 역참조 하는 것이라 ptr 값 자체가 변하지는 않음
+	*(++ptr) = 20; // ptr++는 ptr = ptr + 1 이라서 ptr 값 자체가 변함
+
+	for (i = 0; i < 3; i++)
+		printf("%d ", arr[i]);
+	printf("\n");
+}
+
+int pointer_test()
+{
+	int *num1;
+	int *num2;
+
+	num1 = malloc(sizeof(int));
+	*num1 = 7;
+	num2 = num1;
+
+}
+
+int arrpointer_change(int *arr, int *brr)
+{
+	int i;
+	for (i = 0; i < 5; i++)
+		brr[i] = arr[i];
+	brr[2] = 5;
+}
+
+int arrpointer_insert(int *a, int b[])
+{
+	b = a;
+	//printf("a address: %d\nb address : %d", a, b);
+	b[2] = 2;
+}
+
+int arrpointer_insert2(int **a)
+{
+	printf("테스트");
+	//arrpointer_insert2(a);
+}
+
+int arrpointer_test()
+{
+	int i;
+	int *arr;
+	int *brr;
+	int arr2[4][5] = { 0 };
+	int brr2[5] = { 0 };
+
+	arr = malloc(sizeof(int) * 5);
+	brr = malloc(sizeof(int) * 5);
+	for (i = 0; i < 5; i++)
+		arr[i] = i + 1, brr[i] = 0;
+	//printf("%d",sizeof(arr2));
+	//arrpointer_insert(arr, brr);
+	arrpointer_insert2(arr2);
+	//printf("%d, %d", arr2, brr2);
+	//brr = arr; // 포인터라서 이런 대입이 가능함
+	//brr2 = arr2; // 이건 왜 안되냐? brr2와 arr2는 주소 값이라서 이런 대입이 불가능한 것임
+	/* 주소는 변경할 수 없는 값 but 포인터 변수는 주소를 저장하는 '변수'임, 즉 mutable하다는 뜻임 */
+
+	/*함수의 매개변수로 넘겨주는 경우 주소든 포인터든 함수로 넘어갈 땐 포인터로 변함*/
+	//arrpointer_insert(arr2, brr2);
+
+	printf("\n");
+}
+
 int for_condition_text()
 {
 	int i, j = 10;
@@ -63,6 +169,10 @@ int memcpy_test() {
 
 	for (i = 0; i < 5; i++)
 		printf("%d ", a[i]); //2 2 3 4 5 가 출력됨
+
+	/* memcpy의 경우 현재 내 환경에선 알아서 버퍼를 써서 컴파일되서 그런지 겹치는 부분이 있어도 잘 작동함
+	 * but 실행환경이 달라져서 memcpy를 할 때 버퍼를 사용하지 않는 경우도 있음
+	 * 이럴 때를 대비해서 겹치는 부분이 있는 경우 무조건 버퍼를 사용하는 memmove 함수를 사용하는 걸 추천함*/
 }
 
 int plus_speed_test() {
