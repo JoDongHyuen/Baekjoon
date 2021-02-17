@@ -8,6 +8,106 @@ typedef struct _cordinate {
 	int y;
 }cordinate;
 
+int Problem7_x_sort(int start, int mid, int end, cordinate arr[], cordinate temp[])
+{
+	int idx1 = start, idx2 = mid + 1;
+	int main_idx = start;
+	int i;
+
+	for (i = start; i <= end; i++)
+		temp[i] = arr[i];
+
+	while (idx1 <= mid && idx2 <= end)
+	{
+		if (temp[idx1].x < temp[idx2].x)
+			arr[main_idx++] = temp[idx1++];
+		else
+			arr[main_idx++] = temp[idx2++];
+	}
+
+	if (idx1 <= mid)
+		for (i = 0; i <= mid - idx1; i++)  //mid 값이 + 1 되어서 넘어오느냐 그냥 넘어오느냐에 따라 i < mid -idx1에 부등호 디테일 유의하자
+			arr[main_idx + i] = temp[idx1 + i];
+}
+
+int Problem7_x_merge(int start, int end, cordinate arr[], cordinate temp[])
+{
+	int mid = (start + end) / 2;
+
+	if (start < end) {
+		Problem7_x_merge(start, mid, arr, temp);
+		Problem7_x_merge(mid + 1, end, arr, temp);
+		Problem7_x_sort(start, mid, end, arr, temp);
+	}
+}
+
+int Problem7_y_sort(int start, int end, cordinate arr[])
+{
+	cordinate temp;
+	int pivot = arr[(start + end) / 2].y;
+	int low, high;
+	low = start;
+	high = end;
+
+	while (low <= high)
+	{
+		while (arr[low].y < pivot) low++;
+		while (pivot < arr[high].y) high--;
+		if (low <= high)
+		{
+			temp = arr[low];
+			arr[low] = arr[high];
+			arr[high] = temp;
+			low++;
+			high--;
+		}
+	}
+	if (start < low - 1)
+		Problem7_y_sort(start, low - 1, arr);
+	if (low < end)
+		Problem7_y_sort(low, end, arr);
+}
+
+int sortProblem7()
+{
+	int start, end;
+	int test_case;
+	int i;
+	cordinate arr[100000], temp[100000];
+
+	/* 입력 파트 */
+	scanf("%d", &test_case);
+	for (i = 0; i < test_case; i++)
+		scanf("%d%d", &arr[i].x, &arr[i].y);
+
+	/* y축 정렬 파트 */
+	Problem7_y_sort(0, test_case - 1, arr);
+
+	/* x축 정렬 파트 */
+	start = 0;
+	end = 0;
+	while(1)
+	{
+		if (arr[end].y == arr[end + 1].y)
+			end++;
+		else
+		{
+			Problem7_x_merge(start, end, arr, temp);
+			end++;
+			start = end;
+		}
+
+		if (end == test_case)
+		{
+			Problem7_x_merge(start, end - 1, arr, temp);
+			break;
+		}
+	}
+	/* 출력 파트 */
+	for (i = 0; i < test_case; i++)
+		printf("%d %d\n", arr[i].x, arr[i].y);
+}
+
 void Problem6_y_mergesort(int start, int mid, int end, cordinate cordi[], cordinate temp[])
 {
 	int arr_idx1, arr_idx2;

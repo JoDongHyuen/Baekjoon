@@ -123,6 +123,7 @@ int main(){
 	//sortProblem3(); // 계수 정렬 (counting sort)
 	//sortProblem4(); // 통계학 문제 (counting sort로 해결)
 	//sortProblem5(); // digit 정렬 문제 (quick sort로 해결)
-	sortProblem6();
+	//sortProblem6(); // x, y축 정렬 문제
+	sortProblem7();
 }
 
