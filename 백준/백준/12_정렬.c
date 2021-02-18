@@ -3,6 +3,69 @@
 #include <string.h>
 #include <stdbool.h>
 
+typedef struct _tuple
+{
+	char str[51];
+	int length;
+}tuple;
+
+/* 단어 사전 정렬 */
+void Problem8_dict_sort(int start, int end, int length, tuple input[])
+{
+
+}
+
+/* 길이 기준 정렬 */
+void Problem8_length_sort(int start, int end, tuple input[])
+{
+	tuple temp;
+	int pivot = input[(start + end) / 2].length;
+	int low = start, high = end;
+
+	while (low <= high)
+	{
+		while (input[low].length < pivot) low++;
+		while (pivot < input[high].length) high--;
+		if (low <= high)
+		{
+			temp = input[low];
+			input[low] = input[high];
+			input[high] = temp;
+			low++;
+			high--;
+		}
+	}
+	if (start < low - 1)
+		Problem8_length_sort(start, low - 1, input);
+	if (low < end)
+		Problem8_length_sort(low, end, input);
+}
+
+int sortProblem8()
+{
+	/* 변수 선언 */
+	tuple input[20000];
+	int test_case;
+	int i;
+
+	/* 입력 파트 */
+	scanf("%d", &test_case);
+	for (i = 0; i < test_case; i++) {
+		scanf("%s", input[i].str);
+		input[i].length = strlen(input[i].str);
+	}
+
+	/* 단어 길이 기준 정렬 파트*/
+	Problem8_length_sort(0, test_case - 1, input);
+
+	/* 같은 길이 단어 정렬 파트*/
+
+
+	/* 출력 파트 */
+	for (i = 0; i < test_case; i++)
+		printf("%s\n", input[i].str);
+}
+
 typedef struct _cordinate {
 	int x;
 	int y;
