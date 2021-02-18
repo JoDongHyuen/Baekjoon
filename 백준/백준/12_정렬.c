@@ -10,9 +10,71 @@ typedef struct _tuple
 }tuple;
 
 /* 단어 사전 정렬 */
-void Problem8_dict_sort(int start, int end, int length, tuple input[])
+void Problem8_dict_sort(int start, int end, int length, int pos, tuple input[])
 {
+	tuple temp;
+	char pivot;
+	int low = start, high = end, i;
+	pivot = input[(start + end) / 2].str[pos];
 
+	while (low <= high)
+	{
+		while (input[low].str[pos] < pivot) low++;
+		while (pivot < input[high].str[pos]) high--;
+
+		if (low <= high)
+		{
+			temp = input[low];
+			input[low] = input[high];
+			input[high] = temp;
+			low++;
+			high--;
+		}
+	}
+	if (start < low - 1)
+		Problem8_dict_sort(start, low - 1, length, pos, input);
+	if (low < end)
+		Problem8_dict_sort(low, end, length, pos, input);
+}
+
+void Problem8_dict_Quick(int start, int end, int length, tuple input[])
+{
+	int pos = 0;
+	int local_start = start, local_end = start;
+
+	if (start == end)
+		return;
+
+	/* 첫번째 글자 정렬 */
+	Problem8_dict_sort(start, end, length, pos, input);
+	pos++;
+	
+	while (1)
+	{
+		if (pos == length)
+			break;
+		else
+		{
+			local_end = local_start;
+			while (true)
+			{
+				if (input[local_end].str[pos - 1] == input[local_end + 1].str[pos - 1])
+					local_end++;
+				else
+				{
+					Problem8_dict_sort(local_start, local_end, length, pos, input);
+					local_end++;
+					local_start = local_end;
+				}
+
+				if (local_end == end) {
+					Problem8_dict_sort(local_start, local_end, length, pos, input);
+					pos++;
+					break;
+				}
+			}
+		}
+	}
 }
 
 /* 길이 기준 정렬 */
@@ -47,6 +109,7 @@ int sortProblem8()
 	tuple input[20000];
 	int test_case;
 	int i;
+	int start, end, pos;
 
 	/* 입력 파트 */
 	scanf("%d", &test_case);
@@ -59,7 +122,26 @@ int sortProblem8()
 	Problem8_length_sort(0, test_case - 1, input);
 
 	/* 같은 길이 단어 정렬 파트*/
+	start = 0;
+	end = 0;
+	pos = 0;
+	while (1)
+	{
+		if (input[end].length == input[end + 1].length)
+			end++;
+		else
+		{
+			Problem8_dict_Quick(start, end, input[end].length, input);
+			end++;
+			start = end;
+		}
 
+		if (end == test_case - 1)
+		{
+			Problem8_dict_Quick(start, end, input[end].length, input);
+			break;
+		}
+	}
 
 	/* 출력 파트 */
 	for (i = 0; i < test_case; i++)
