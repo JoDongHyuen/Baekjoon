@@ -6,17 +6,45 @@
 typedef struct _human
 {
 	int age;
+	int order;
 	char name[101];
 }human;
 
-void Problem9_name_sort(int start, int mid, int end, human info[], human temp[])
+void Problem9_order_sort(int start, int mid, int end, human info[], human temp[])
 {
+	int main_idx, idx1, idx2;
+	int i;
 
+	main_idx = start;
+	idx1 = start;
+	idx2 = mid;
+
+	for (i = start; i <= end; i++)
+		temp[i] = info[i];
+
+	while (idx1 <= mid - 1 && idx2 <= end)
+	{
+		if (info[idx1].order < info[idx2].order)
+			info[main_idx++] = temp[idx1++];
+		else
+			info[main_idx++] = temp[idx2++];
+	}
+
+	if (idx1 < mid)
+		for (i = 0; i < mid - idx1; i++)
+			info[main_idx + i] = temp[idx1 + i];
 }
 
-void Problem9_name_merge(int start, int end, human info[], human temp[])
+void Problem9_order_merge(int start, int end, human info[], human temp[])
 {
-
+	int mid;
+	if (start < end)
+	{
+		mid = (start + end) / 2;
+		Problem9_order_merge(start, mid, info, temp);
+		Problem9_order_merge(mid + 1, end, info, temp);
+		Problem9_order_sort(start, mid + 1, end, info, temp);
+	}
 }
 
 void Problem9_age_sort(int start, int mid, int end, human info[], human temp[])
@@ -33,14 +61,14 @@ void Problem9_age_sort(int start, int mid, int end, human info[], human temp[])
 
 	while (idx1 <= mid - 1 && idx2 <= end)
 	{
-		if (temp[idx1].age < temp[idx2].age)
+		if (temp[idx1].age <= temp[idx2].age) //여기에 =을 안넣으면 unstalbe_sort가 됨
 			info[main_idx++] = temp[idx1++];
 		else
 			info[main_idx++] = temp[idx2++];
 	}
 
 	if (idx1 < mid)
-		for (i = idx1; i < mid - idx1; i++)
+		for (i = 0; i < mid - idx1; i++)
 			info[main_idx + i] = temp[idx1 + i];
 }
 
@@ -59,19 +87,42 @@ void Problem9_age_merge(int start, int end, human info[], human temp[])
 
 int sortProblem9()
 {
-	int test_case, i;
+	int test_case, i, order = 0;
+	int start, end;
 	human input[100000];
 	human temp[100000];
 
 	/* 입력 파트 */
 	scanf("%d", &test_case);
-	for (i = 0; i < test_case; i++)
+	for (i = 0; i < test_case; i++) {
 		scanf("%d%s", &input[i].age, input[i].name);
+		input[i].order = i;
+	}
 
+	/* 예외 처리 */
+	if (test_case == 1) {
+		printf("%d %s\n", input[0].age, input[0].name);
+		return;
+	}
 	/* 나이 정렬 */
 	Problem9_age_merge(0, test_case - 1, input, temp);
 
-	/* 이름 정렬 */
+	/* 입력 순서 정렬이였지만, merge sort는 stable_sort라 할 필요 없었음 
+	start = 0;
+	end = 0;
+	while (1) {
+		if (input[end].age == input[end + 1].age)
+			end++;
+		else {
+			Problem9_order_merge(start, end, input, temp);
+			start = ++end;
+		}
+		if (end + 1 == test_case)
+		{
+			Problem9_order_merge(start, end, input, temp);
+			break;
+		}
+	}*/
 
 	/* 출력 파트 */
 	for (i = 0; i < test_case; i++)
