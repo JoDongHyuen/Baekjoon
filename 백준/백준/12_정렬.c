@@ -3,6 +3,81 @@
 #include <string.h>
 #include <stdbool.h>
 
+typedef struct _human
+{
+	int age;
+	char name[101];
+}human;
+
+void Problem9_name_sort(int start, int mid, int end, human info[], human temp[])
+{
+
+}
+
+void Problem9_name_merge(int start, int end, human info[], human temp[])
+{
+
+}
+
+void Problem9_age_sort(int start, int mid, int end, human info[], human temp[])
+{
+	int main_idx, idx1, idx2;
+	int i;
+
+	for (i = start; i <= end; i++)
+		temp[i] = info[i];
+
+	main_idx = start;
+	idx1 = start;
+	idx2 = mid;
+
+	while (idx1 <= mid - 1 && idx2 <= end)
+	{
+		if (temp[idx1].age < temp[idx2].age)
+			info[main_idx++] = temp[idx1++];
+		else
+			info[main_idx++] = temp[idx2++];
+	}
+
+	if (idx1 < mid)
+		for (i = idx1; i < mid - idx1; i++)
+			info[main_idx + i] = temp[idx1 + i];
+}
+
+void Problem9_age_merge(int start, int end, human info[], human temp[])
+{
+	int mid;
+
+	if (start < end)
+	{
+		mid = (start + end) / 2;
+		Problem9_age_merge(start, mid, info, temp);
+		Problem9_age_merge(mid + 1, end, info, temp);
+		Problem9_age_sort(start, mid + 1, end, info, temp);
+	}
+}
+
+int sortProblem9()
+{
+	int test_case, i;
+	human input[100000];
+	human temp[100000];
+
+	/* 입력 파트 */
+	scanf("%d", &test_case);
+	for (i = 0; i < test_case; i++)
+		scanf("%d%s", &input[i].age, input[i].name);
+
+	/* 나이 정렬 */
+	Problem9_age_merge(0, test_case - 1, input, temp);
+
+	/* 이름 정렬 */
+
+	/* 출력 파트 */
+	for (i = 0; i < test_case; i++)
+		printf("%d %s\n", input[i].age, input[i].name);
+}
+
 typedef struct _tuple
 {
 	char str[51];

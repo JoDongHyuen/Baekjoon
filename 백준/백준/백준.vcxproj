@@ -93,7 +93,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <TerminalServerAware>false</TerminalServerAware>
-      <StackReserveSize>10000000</StackReserveSize>
+      <StackReserveSize>1000000000</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

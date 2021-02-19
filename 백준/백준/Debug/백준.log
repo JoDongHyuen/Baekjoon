@@ -1,67 +1,72 @@
 ﻿  12_정렬.c
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(17): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(75): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(67): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(77): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(69): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(193): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(92): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(150): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(195): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(152): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(316): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(268): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(318): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(270): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(311): warning C4101: 'input_x' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(311): warning C4101: 'input_y' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(342): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(342): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(381): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(391): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(406): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(393): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(410): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(386): warning C4101: 'input_x' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(386): warning C4101: 'input_y' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(417): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(417): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(456): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(473): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(481): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(477): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(485): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(563): warning C4033: 'Quick_sort'은(는) 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(619): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(548): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(622): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(552): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(640): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(638): warning C4033: 'Quick_sort'은(는) 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(694): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(643): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(697): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(638): warning C4101: 'temp' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(682): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(715): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(685): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(718): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(680): warning C4101: 'min' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(710): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(713): warning C4101: 'temp' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(757): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(713): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(760): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(118): warning C4716: 'sortProblem8': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(145): warning C4716: 'Problem7_x_sort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(156): warning C4716: 'Problem7_x_merge': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(183): warning C4716: 'Problem7_y_sort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(223): warning C4716: 'sortProblem7': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(337): warning C4716: 'sortProblem6': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(373): warning C4716: 'Quick_sort_problem5': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(392): warning C4716: 'sortProblem5': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(536): warning C4716: 'MergeSort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(495): warning C4716: 'sortProblem3': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(526): warning C4716: 'Merge': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(464): warning C4716: 'sortProblem4': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(548): warning C4716: 'sortProblem2verMerge': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(628): warning C4716: 'sortProblem2verQuick': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(612): warning C4716: 'Quick_sort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(670): warning C4716: 'sortProblem1verInsertion': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(698): warning C4716: 'sortProblem1verBubble': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(730): warning C4716: 'sortProblem1verSelection': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(755): warning C4101: 'min' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(785): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(788): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(79): warning C4716: 'sortProblem9': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(231): warning C4716: 'Problem7_x_merge': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(193): warning C4716: 'sortProblem8': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(220): warning C4716: 'Problem7_x_sort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(298): warning C4716: 'sortProblem7': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(258): warning C4716: 'Problem7_y_sort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(412): warning C4716: 'sortProblem6': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(467): warning C4716: 'sortProblem5': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(539): warning C4716: 'sortProblem4': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(448): warning C4716: 'Quick_sort_problem5': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(570): warning C4716: 'sortProblem3': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(601): warning C4716: 'Merge': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(611): warning C4716: 'MergeSort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(623): warning C4716: 'sortProblem2verMerge': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(703): warning C4716: 'sortProblem2verQuick': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(687): warning C4716: 'Quick_sort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(745): warning C4716: 'sortProblem1verInsertion': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(805): warning C4716: 'sortProblem1verSelection': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\12_정렬.c(773): warning C4716: 'sortProblem1verBubble': 값을 반환해야 합니다.
   백준.vcxproj -> C:\Users\rhsnf\문서\Visual Studio 2015\Projects\baekjoon\백준\Debug\백준.exe
   백준.vcxproj -> C:\Users\rhsnf\문서\Visual Studio 2015\Projects\baekjoon\백준\Debug\백준.pdb (Full PDB)
