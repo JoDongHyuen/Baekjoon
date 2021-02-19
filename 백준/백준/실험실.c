@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+int strcmp_test()
+{
+	char str1[] = "aab";
+	char str2[] = "ab";
+
+	printf("%d\n", strcmp(str1, str2));
+}
+
 int char_pointer_test()
 {
 	char str1[] = "Hello World";

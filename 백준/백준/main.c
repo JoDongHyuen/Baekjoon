@@ -16,6 +16,7 @@ int main(){
 	//pointer_test2();
 	//strcpy_test();
 	//char_pointer_test();
+	//strcmp_test();
 
 	//star1();
 

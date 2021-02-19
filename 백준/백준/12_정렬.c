@@ -10,17 +10,17 @@ typedef struct _tuple
 }tuple;
 
 /* 단어 사전 정렬 */
-void Problem8_dict_sort(int start, int end, int length, int pos, tuple input[])
+void Problem8_dict_sort(int start, int end, tuple input[])
 {
 	tuple temp;
-	char pivot;
+	tuple pivot;
 	int low = start, high = end, i;
-	pivot = input[(start + end) / 2].str[pos];
+	pivot = input[(start + end) / 2];
 
 	while (low <= high)
 	{
-		while (input[low].str[pos] < pivot) low++;
-		while (pivot < input[high].str[pos]) high--;
+		while (strcmp(pivot.str, input[low].str) > 0 ) low++;
+		while (strcmp(pivot.str, input[high].str) < 0) high--;
 
 		if (low <= high)
 		{
@@ -32,49 +32,9 @@ void Problem8_dict_sort(int start, int end, int length, int pos, tuple input[])
 		}
 	}
 	if (start < low - 1)
-		Problem8_dict_sort(start, low - 1, length, pos, input);
+		Problem8_dict_sort(start, low - 1, input);
 	if (low < end)
-		Problem8_dict_sort(low, end, length, pos, input);
-}
-
-void Problem8_dict_Quick(int start, int end, int length, tuple input[])
-{
-	int pos = 0;
-	int local_start = start, local_end = start;
-
-	if (start == end)
-		return;
-
-	/* 첫번째 글자 정렬 */
-	Problem8_dict_sort(start, end, length, pos, input);
-	pos++;
-	
-	while (1)
-	{
-		if (pos == length)
-			break;
-		else
-		{
-			local_end = local_start;
-			while (true)
-			{
-				if (input[local_end].str[pos - 1] == input[local_end + 1].str[pos - 1])
-					local_end++;
-				else
-				{
-					Problem8_dict_sort(local_start, local_end, length, pos, input);
-					local_end++;
-					local_start = local_end;
-				}
-
-				if (local_end == end) {
-					Problem8_dict_sort(local_start, local_end, length, pos, input);
-					pos++;
-					break;
-				}
-			}
-		}
-	}
+		Problem8_dict_sort(low, end, input);
 }
 
 /* 길이 기준 정렬 */
@@ -127,25 +87,34 @@ int sortProblem8()
 	pos = 0;
 	while (1)
 	{
+		/* test_case가 1인 경우 end + 1에서 out of index 발생 */
+		/* 이거 처리를 안해서 한 번 더 틀림 */
+		if (test_case == 1)
+			break;
+
 		if (input[end].length == input[end + 1].length)
 			end++;
 		else
 		{
-			Problem8_dict_Quick(start, end, input[end].length, input);
+			Problem8_dict_sort(start, end, input);
 			end++;
 			start = end;
 		}
 
 		if (end == test_case - 1)
 		{
-			Problem8_dict_Quick(start, end, input[end].length, input);
+			Problem8_dict_sort(start, end, input);
 			break;
 		}
 	}
 
 	/* 출력 파트 */
-	for (i = 0; i < test_case; i++)
-		printf("%s\n", input[i].str);
+
+	// 문제 제대로 안읽어서 같은 단어 또 출력해서 틀림
+	for (i = 0; i < test_case; i++) {
+		if (strcmp(input[i].str, input[i + 1].str) != 0) 
+			printf("%s\n", input[i].str);
+	}
 }
 
 typedef struct _cordinate {
