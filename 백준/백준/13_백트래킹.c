@@ -1,6 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void Problem4_Tracking(int depth, int width, int pos, int num, int arr[])
+{
+	int i;
+	/* 출력 파트 */
+	if (pos == width)
+	{
+		for (i = 0; i < width; i++)
+			printf("%d ", arr[i]);
+		printf("\n");
+	}
+	/* 재귀 파트 */
+	else
+	{
+		for (i = num; i < depth; i++)
+		{
+			arr[pos] = i + 1;
+			Problem4_Tracking(depth, width, pos + 1, i, arr);
+		}
+	}
+}
+
+int backtracking_Problem4()
+{
+	int input_N, input_M, pos = 0;
+	int arr[8];
+
+	scanf("%d %d", &input_N, &input_M);
+
+	Problem4_Tracking(input_N, input_M, pos, 0, arr);
+}
+
 void Problem3_Tracking(int depth, int width, int pos, int arr[])
 {
 	int i;
