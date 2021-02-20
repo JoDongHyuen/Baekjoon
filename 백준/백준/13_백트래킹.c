@@ -1,10 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void Problem3_Tracking(int depth, int width, int pos, int arr[])
+{
+	int i;
+	/* 출력 파트 */
+	if (pos == width)
+	{
+		for (i = 0; i < width; i++)
+			printf("%d ", arr[i]);
+		printf("\n");
+		return;
+	}
+	/* 재귀 파트 */
+	else
+	{
+		for (i = 0; i < depth; i++) // i < width로 했다가 한 번 틀림
+		{
+			arr[pos] = i + 1;
+			Problem3_Tracking(depth, width, pos + 1, arr);
+		}
+	}
+}
+
+int backtracking_Problem3()
+{
+	int input_N, input_M, pos = 0;
+	int arr[7];
+
+	scanf("%d%d", &input_N, &input_M);
+
+	Problem3_Tracking(input_N, input_M, pos, arr);
+}
+
+
 void Problem2_Tracking(int depth, int width, int pos, int num, int Used_Check[], int arr[])
 {
 	int i, j;
-
+	/* 출력 파트 */
 	if (pos == width)
 	{
 		//무식하게 이렇게 출력에서 거르면 안됨!
@@ -18,6 +51,7 @@ void Problem2_Tracking(int depth, int width, int pos, int num, int Used_Check[],
 		printf("\n");
 		return;
 	}
+	/* 재귀 파트 */
 	else
 	{
 		for (i = num; i < depth; i++) // i 지정하는 부분을 충분히 다루면 오름차순 해결 가능
@@ -47,6 +81,7 @@ int backtracking_Problem2()
 void Problem1_Tracking(int depth, int width, int pos, int Used_Check[], int arr[])
 {
 	int i, j;
+	/* 출력 파트 */
 	if (pos == width)
 	{
 		for (i = 0; i < width; i++)
@@ -54,6 +89,7 @@ void Problem1_Tracking(int depth, int width, int pos, int Used_Check[], int arr[
 		printf("\n");
 		return;
 	}
+	/* 재귀 파트 */
 	else
 		for (i = 0; i < depth; i++)
 		{
