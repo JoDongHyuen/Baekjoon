@@ -15,53 +15,59 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="06_함수.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="09_수학2.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="08_수학1.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="12_정렬.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="07_문자열.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="04_while문.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="03_for문.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="02_if문.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="05_1차원배열.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="main.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="01_입출력과 사칙연산.c">
-      <Filter>리소스 파일</Filter>
+    <ClCompile Include="실험실.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="실험실.c">
-      <Filter>리소스 파일</Filter>
+      <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="10_재귀.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="11_브루트포스.c">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="실험실.cpp">
-      <Filter>리소스 파일</Filter>
+    <ClCompile Include="main1.c">
+      <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="class_01.c">
-      <Filter>리소스 파일</Filter>
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="13_백트래킹.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="12_정렬.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11_브루트포스.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10_재귀.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="09_수학2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="08_수학1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="07_문자열.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="06_함수.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="05_1차원배열.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="04_while문.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03_for문.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="02_if문.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01_입출력과 사칙연산.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main2.c">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
