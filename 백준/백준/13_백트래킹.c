@@ -1,6 +1,76 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int Problem15663_Bakctracking(int depth, int width, int pos, int arr[], int Number_Flag[], int Used_Check[])
+{
+	int i;
+	int Prev_Num = 0;
+	if (pos == width)
+	{
+		for (i = 0; i < width; i++)
+			printf("%d ", arr[i]);
+		printf("\n");
+	}
+	else
+	{
+		for (i = 0; i < depth; i++)
+		{
+			if (Used_Check[i] == 0 && Prev_Num != Number_Flag[i]) // Prev_Num 대신 arr[pos] 넣으면 3 3 ~ 3 4 3 반례가 존재, 이말은 Prev_Num을 3으로 초기화한다는 것과 비슷한 말임
+			{
+				arr[pos] = Number_Flag[i];
+				Prev_Num = arr[pos];
+				Used_Check[i] = 1;
+				Problem15663_Bakctracking(depth, width, pos + 1, arr, Number_Flag, Used_Check);
+				Used_Check[i] = 0;
+			}
+		}
+	}
+}
+
+int Problem15663_Sort(int start, int end, int target[])
+{
+	int pivot = target[(start + end) / 2];
+	int low = start, high = end;
+	int temp;
+
+	while (low <= high)
+	{
+		while (target[low] < pivot) low++;
+		while (pivot < target[high]) high--;
+		if (low <= high)
+		{
+			temp = target[low];
+			target[low] = target[high];
+			target[high] = temp;
+			low++;
+			high--;
+		}
+	}
+	if (start < low - 1)
+		Problem15663_Sort(start, low - 1, target);
+	if (low < end)
+		Problem15663_Sort(low, end, target);
+}
+
+int Problem15663()
+{
+	int input_N, input_M;
+	int Number_Flag[8], arr[8], Used_Check[8] = { 0 };
+	int i, pos = 0;
+
+	/* 입력 파트 */
+	scanf("%d%d", &input_N, &input_M);
+	for (i = 0; i < input_N; i++)
+		scanf("%d", &Number_Flag[i]);
+
+	/* 정렬 파트 */
+	Problem15663_Sort(0, input_N - 1, Number_Flag);
+
+	/* 백트래킹 파트 */
+	Problem15663_Bakctracking(input_N, input_M, pos, arr, Number_Flag, Used_Check);
+
+}
+
 int Problem15657_Backtracking(int depth, int width, int pos, int num, int arr[], int Number_Flag[])
 {
 	int i;
