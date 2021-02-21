@@ -1,6 +1,144 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int Problem15657_Backtracking(int depth, int width, int pos, int num, int arr[], int Number_Flag[])
+{
+	int i;
+
+	if (pos == width)
+	{
+		for (i = 0; i < width; i++)
+			printf("%d ", arr[i]);
+		printf("\n");
+	}
+	else
+	{
+		for (i = num; i < depth; i++)
+		{
+			arr[pos] = Number_Flag[i];
+			Problem15657_Backtracking(depth, width, pos + 1, i, arr, Number_Flag);
+		}
+	}
+}
+
+int Problem15657_Sort(int start, int mid, int end, int arr[], int temp[])
+{
+	int Main_Idx = start, Idx1 = start, Idx2 = mid;
+	int i;
+
+	for (i = start; i <= end; i++)
+		temp[i] = arr[i];
+
+	while (Idx1 <= mid - 1 && Idx2 <= end)
+	{
+		if (temp[Idx1] <= temp[Idx2])
+			arr[Main_Idx++] = temp[Idx1++];
+		else
+			arr[Main_Idx++] = temp[Idx2++];
+	}
+
+	if (Idx1 < mid)
+		for (i = 0; i < mid - Idx1; i++)
+			arr[Main_Idx + i] = temp[Idx1 + i];
+}
+
+int Problem15657_Merge(int start, int end, int arr[], int temp[])
+{
+	if (start < end)
+	{
+		int mid = (start + end) / 2;
+		Problem15657_Merge(start, mid, arr, temp);
+		Problem15657_Merge(mid + 1, end, arr, temp);
+		Problem15657_Sort(start, mid + 1, end, arr, temp);
+	}
+}
+
+int Problem15657()
+{
+	int Number_Flag[7], temp[7], arr[7];
+	int input_N, input_M;
+	int i, pos = 0;
+	scanf("%d%d", &input_N, &input_M);
+
+	for (i = 0; i < input_N; i++)
+		scanf("%d", &Number_Flag[i]);
+
+	/* 정렬 파트 */
+	Problem15657_Merge(0, input_N - 1, Number_Flag, temp);
+
+	/* 백트래킹 파트 */
+	Problem15657_Backtracking(input_N, input_M, pos, 0, arr, Number_Flag);
+}
+
+int Problem15656_Backtracking(int depth, int width, int pos, int arr[], int Number_Flag[])
+{
+	int i;
+
+	if (pos == width)
+	{
+		for (i = 0; i < width; i++)
+			printf("%d ", arr[i]);
+		printf("\n");
+	}
+	else
+	{
+		for (i = 0; i < depth; i++)
+		{
+			arr[pos] = Number_Flag[i];
+			Problem15656_Backtracking(depth, width, pos + 1, arr, Number_Flag);
+		}
+	}
+}
+
+int Problem15656_Sort(int start, int mid, int end, int arr[], int temp[])
+{
+	int Main_Idx = start, Idx1 = start, Idx2 = mid;
+	int i;
+
+	for (i = start; i <= end; i++)
+		temp[i] = arr[i];
+
+	while (Idx1 <= mid - 1 && Idx2 <= end)
+	{
+		if (temp[Idx1] <= temp[Idx2])
+			arr[Main_Idx++] = temp[Idx1++];
+		else
+			arr[Main_Idx++] = temp[Idx2++];
+	}
+
+	if (Idx1 < mid)
+		for (i = 0; i < mid - Idx1; i++)
+			arr[Main_Idx + i] = temp[Idx1 + i];
+}
+
+int Problem15656_Merge(int start, int end, int arr[], int temp[])
+{
+	if (start < end)
+	{
+		int mid = (start + end) / 2;
+		Problem15656_Merge(start, mid, arr, temp);
+		Problem15656_Merge(mid + 1, end, arr, temp);
+		Problem15656_Sort(start, mid + 1, end, arr, temp);
+	}
+}
+
+int Problem15656()
+{
+	int Number_Flag[7], temp[7], arr[7];
+	int input_N, input_M;
+	int i, pos = 0;
+	scanf("%d%d", &input_N, &input_M);
+
+	for (i = 0; i < input_N; i++)
+		scanf("%d", &Number_Flag[i]);
+
+	/* 정렬 파트 */
+	Problem15656_Merge(0, input_N - 1, Number_Flag, temp);
+
+	/* 백트래킹 파트 */
+	Problem15656_Backtracking(input_N, input_M, pos, arr, Number_Flag);
+}
+
 int Problem15655_backtracking(int depth, int width, int pos, int value, int arr[], int Used_Check[], int Number_Flag[])
 {
 	int i;
