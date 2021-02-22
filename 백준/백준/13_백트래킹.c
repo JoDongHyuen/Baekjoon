@@ -1,6 +1,75 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void Problem15664_Backtracking(int depth, int width, int pos, int value, int arr[], int Used_Check[], int Number_Flag[])
+{
+	int i;
+	int Prev_Num = 0;
+	/* 출력 파트 */
+	if (pos == width)
+	{
+		for (i = 0; i < width; i++)
+			printf("%d ", arr[i]);
+		printf("\n");
+	}
+	/* 재귀 파트 */
+	else
+	{
+		for(i = value; i < depth; i++)
+			if (Used_Check[i] == 0 && Prev_Num != Number_Flag[i])
+			{
+				arr[pos] = Number_Flag[i];
+				Prev_Num = arr[pos];
+				Used_Check[i] = 1;
+				Problem15664_Backtracking(depth, width, pos + 1, i, arr, Used_Check, Number_Flag);
+				Used_Check[i] = 0;
+			}
+	}
+}
+
+void Problem15664_Sort(int start, int end, int arr[])
+{
+	int pivot = arr[(start + end) / 2];
+	int low = start, high = end;
+	int temp;
+
+	while (low <= high)
+	{
+		while (arr[low] < pivot) low++;
+		while (pivot < arr[high]) high--;
+		if (low <= high)
+		{
+			temp = arr[low];
+			arr[low] = arr[high];
+			arr[high] = temp;
+			low++;
+			high--;
+		}
+	}
+	if (start < low - 1)
+		Problem15664_Sort(start, low - 1, arr);
+	if (low < end)
+		Problem15664_Sort(low, end, arr);
+}
+
+int Problem15664()
+{
+	int input_N, input_M;
+	int arr[8], Used_Check[8] = { 0 }, Number_Flag[8];
+	int i, pos = 0;
+
+	scanf("%d%d", &input_N, &input_M);
+
+	for (i = 0; i < input_N; i++)
+		scanf("%d", &Number_Flag[i]);
+
+	/* 정렬 파트 */
+	Problem15664_Sort(0, input_N - 1, Number_Flag);
+
+	/* 백트래킹 파트 */
+	Problem15664_Backtracking(input_N, input_M, pos, 0, arr, Used_Check, Number_Flag);
+}
+
 int Problem15663_Bakctracking(int depth, int width, int pos, int arr[], int Number_Flag[], int Used_Check[])
 {
 	int i;
