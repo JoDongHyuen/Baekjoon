@@ -1,64 +1,71 @@
 ﻿  13_백트래킹.c
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(61): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(204): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(229): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(63): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(295): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(129): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(297): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(132): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(363): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(199): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(366): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(201): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(433): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(268): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(435): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(271): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(502): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(337): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(505): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(340): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(571): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(404): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(574): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(407): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(638): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(470): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(641): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(473): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(704): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(507): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(707): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(539): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(741): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(547): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(584): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(773): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(591): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(621): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(781): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(818): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(70): warning C4716: 'Problem15665': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(190): warning C4716: 'Problem15663_Sort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(139): warning C4716: 'Problem15664': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(165): warning C4716: 'Problem15663_Bakctracking': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(229): warning C4716: 'Problem15657_Backtracking': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(209): warning C4716: 'Problem15663': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(261): warning C4716: 'Problem15657_Merge': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(278): warning C4716: 'Problem15657': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(250): warning C4716: 'Problem15657_Sort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(298): warning C4716: 'Problem15656_Backtracking': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(319): warning C4716: 'Problem15656_Sort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(330): warning C4716: 'Problem15656_Merge': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(347): warning C4716: 'Problem15656': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(372): warning C4716: 'Problem15655_backtracking': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(413): warning C4716: 'Problem15655': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(397): warning C4716: 'Problem15655_sort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(438): warning C4716: 'Problem15654_backtracking': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(463): warning C4716: 'Problem15654_sort': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(479): warning C4716: 'Problem15654': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(542): warning C4716: 'backtracking_Problem3': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(510): warning C4716: 'backtracking_Problem4': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(587): warning C4716: 'backtracking_Problem2': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(625): warning C4716: 'backtracking_Problem1': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(825): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(855): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(236): warning C4716: 'Problem9663': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(101): warning C4716: 'Problem9663_SetQueen': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(220): warning C4716: 'Problem9663_Backtracking': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(200): warning C4716: 'Problem9663_UnsetQueen': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(304): warning C4716: 'Problem15665': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(373): warning C4716: 'Problem15664': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(399): warning C4716: 'Problem15663_Bakctracking': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(424): warning C4716: 'Problem15663_Sort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(443): warning C4716: 'Problem15663': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(463): warning C4716: 'Problem15657_Backtracking': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(484): warning C4716: 'Problem15657_Sort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(495): warning C4716: 'Problem15657_Merge': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(512): warning C4716: 'Problem15657': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(553): warning C4716: 'Problem15656_Sort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(532): warning C4716: 'Problem15656_Backtracking': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(564): warning C4716: 'Problem15656_Merge': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(581): warning C4716: 'Problem15656': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(606): warning C4716: 'Problem15655_backtracking': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(631): warning C4716: 'Problem15655_sort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(647): warning C4716: 'Problem15655': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(672): warning C4716: 'Problem15654_backtracking': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(697): warning C4716: 'Problem15654_sort': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(713): warning C4716: 'Problem15654': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(744): warning C4716: 'backtracking_Problem4': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(776): warning C4716: 'backtracking_Problem3': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(821): warning C4716: 'backtracking_Problem2': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(859): warning C4716: 'backtracking_Problem1': 값을 반환해야 합니다.
   백준.vcxproj -> C:\Users\rhsnf\문서\Visual Studio 2015\Projects\baekjoon\백준\Debug\백준.exe
   백준.vcxproj -> C:\Users\rhsnf\문서\Visual Studio 2015\Projects\baekjoon\백준\Debug\백준.pdb (Full PDB)

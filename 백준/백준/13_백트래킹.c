@@ -1,6 +1,240 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int Problem9663_SetQueen(int row, int col, int Chess_Borad[][14], int depth, int Q_Num)
+{
+	int local_row, local_col;
+
+	/* 대각선 처리 */
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == 0)
+			Chess_Borad[local_row][local_col] = Q_Num;
+		local_row++;
+		local_col++;
+		if (local_row >= depth || local_col >= depth)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == 0)
+			Chess_Borad[local_row][local_col] = Q_Num;
+		local_row--;
+		local_col--;
+		if (local_row <= -1 || local_col <= -1)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == 0)
+			Chess_Borad[local_row][local_col] = Q_Num;
+		local_row++;
+		local_col--;
+		if (local_row >= depth || local_col <= -1)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == 0)
+			Chess_Borad[local_row][local_col] = Q_Num;
+		local_row--;
+		local_col++;
+		if (local_row <= -1 || local_col >= depth)
+			break;
+	}
+
+	/* 가로 세로 처리 */
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == 0)
+			Chess_Borad[row][local_col] = Q_Num;
+		local_col++;
+		if (local_col >= depth)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == 0)
+			Chess_Borad[row][local_col] = Q_Num;
+		local_col--;
+		if (local_col <= -1)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == 0)
+			Chess_Borad[local_row][col] = Q_Num;
+		local_row++;
+		if (local_row >= depth)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == 0)
+			Chess_Borad[local_row][col] = Q_Num;
+		local_row--;
+		if (local_row <= -1)
+			break;
+	}
+}
+
+int Problem9663_UnsetQueen(int row, int col, int Chess_Borad[][14], int depth, int Q_Num)
+{
+	int local_row, local_col;
+
+	/* 대각선 처리 */
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == Q_Num)
+			Chess_Borad[local_row][local_col] = 0;
+		local_row++;
+		local_col++;
+		if (local_row >= depth || local_col >= depth)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == Q_Num)
+			Chess_Borad[local_row][local_col] = 0;
+		local_row--;
+		local_col--;
+		if (local_row <= -1 || local_col <= -1)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == Q_Num)
+			Chess_Borad[local_row][local_col] = 0;
+		local_row++;
+		local_col--;
+		if (local_row >= depth || local_col <= -1)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == Q_Num)
+			Chess_Borad[local_row][local_col] = 0;
+		local_row--;
+		local_col++;
+		if (local_row <= -1 || local_col >= depth)
+			break;
+	}
+
+	/* 가로 세로 처리 */
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == Q_Num)
+			Chess_Borad[row][local_col] = 0;
+		local_col++;
+		if (local_col >= depth)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == Q_Num)
+			Chess_Borad[row][local_col] = 0;
+		local_col--;
+		if (local_col <= -1)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == Q_Num)
+			Chess_Borad[local_row][col] = 0;
+		local_row++;
+		if (local_row >= depth)
+			break;
+	}
+
+	local_row = row;
+	local_col = col;
+	while (1)
+	{
+		if (Chess_Borad[local_row][local_col] == Q_Num)
+			Chess_Borad[local_row][col] = 0;
+		local_row--;
+		if (local_row <= -1)
+			break;
+	}
+}
+
+int Problem9663_Backtracking(int Q_Count, int depth, int* Success_Count, int Chess_Borad[][14], int pos)
+{
+	int i, j;
+
+	/* N_Queen 성공시 카운트 */
+	if (Q_Count == depth)
+		(*Success_Count)++;
+	/* 재귀 파트 */
+	else
+	{
+		for (i = pos; i < depth*depth; i++)
+			if (Chess_Borad[i / depth][i % depth] == 0)
+			{
+				Problem9663_SetQueen(i / depth, i % depth, Chess_Borad, depth, Q_Count + 1);
+				Problem9663_Backtracking(Q_Count + 1, depth, Success_Count, Chess_Borad, i);
+				Problem9663_UnsetQueen(i / depth, i % depth, Chess_Borad, depth, Q_Count + 1);
+			}
+	}
+}
+
+int Problem9663()
+{
+	int input;
+	int Q_Count = 0, Success_Count = 0;
+	int Chess_Borad[14][14] = { 0 };
+	int Check_Pos[14][14] = { 0 };
+
+	scanf("%d", &input);
+
+	/* 백트래킹 파트 */
+	Problem9663_Backtracking(Q_Count, input, &Success_Count, Chess_Borad, 0);
+
+	/* 결과 출력 */
+	printf("%d\n", Success_Count);
+}
+
 void Problem15665_Backtracking(int depth, int width, int pos, int arr[], int Number_Flag[])
 {
 	int i;
