@@ -40,10 +40,10 @@ c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백�
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(825): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(855): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(200): warning C4716: 'Problem9663_UnsetQueen': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(236): warning C4716: 'Problem9663': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(101): warning C4716: 'Problem9663_SetQueen': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(220): warning C4716: 'Problem9663_Backtracking': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(200): warning C4716: 'Problem9663_UnsetQueen': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(304): warning C4716: 'Problem15665': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(373): warning C4716: 'Problem15664': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(399): warning C4716: 'Problem15663_Bakctracking': 값을 반환해야 합니다.
@@ -53,10 +53,10 @@ c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백�
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(484): warning C4716: 'Problem15657_Sort': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(495): warning C4716: 'Problem15657_Merge': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(512): warning C4716: 'Problem15657': 값을 반환해야 합니다.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(553): warning C4716: 'Problem15656_Sort': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(532): warning C4716: 'Problem15656_Backtracking': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(564): warning C4716: 'Problem15656_Merge': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(581): warning C4716: 'Problem15656': 값을 반환해야 합니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(553): warning C4716: 'Problem15656_Sort': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(606): warning C4716: 'Problem15655_backtracking': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(631): warning C4716: 'Problem15655_sort': 값을 반환해야 합니다.
 c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\13_백트래킹.c(647): warning C4716: 'Problem15655': 값을 반환해야 합니다.

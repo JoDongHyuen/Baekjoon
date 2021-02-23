@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* N - Queen 문제 접근법*/
+// 1. 백트래킹 기법이다
+// 2. Q을 두었을 때 보드에 마킹
+// 2-2. But 마킹을 지울 때 이전에 존재 했는 마킹인지 아닌지 0, 1만 쓰면 알 수 없음
+// 3. 중복된 해법을 걸렀는지 확인 - 여기까지 하면 올바른 정답은 나옴
+
+/* N - Queen 최적화 기법*/
+// 1. 퀸을 둘 때 한 행에 퀸 하나만 올 수 있다는걸 for문에 적용했는가?
+// 2. 보드에 마킹할 때 혹시 while문으로 대각, 상하좌우를 처리하진 않았는가?
+// + 9663 번 문제는 1번을 해결하면 시간초과가 안뜨긴 함
+
 int Problem9663_SetQueen(int row, int col, int Chess_Borad[][14], int depth, int Q_Num)
 {
 	int local_row, local_col;
@@ -209,7 +220,7 @@ int Problem9663_Backtracking(int Q_Count, int depth, int* Success_Count, int Che
 	/* 재귀 파트 */
 	else
 	{
-		for (i = pos; i < depth*depth; i++)
+		for (i = depth * Q_Count; i < depth * (Q_Count + 1); i++) // !!퀸이 한 행에 한 개만 올 수 있다는게 포인트이다!!
 			if (Chess_Borad[i / depth][i % depth] == 0)
 			{
 				Problem9663_SetQueen(i / depth, i % depth, Chess_Borad, depth, Q_Count + 1);
