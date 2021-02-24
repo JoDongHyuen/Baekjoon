@@ -151,6 +151,7 @@
     <ClCompile Include="10_재귀.c" />
     <ClCompile Include="11_브루트포스.c" />
     <ClCompile Include="13_백트래킹.c" />
+    <ClCompile Include="Problem2580.c" />
     <ClCompile Include="class_01.c" />
     <ClCompile Include="main1.c" />
     <ClCompile Include="04_while문.c" />
