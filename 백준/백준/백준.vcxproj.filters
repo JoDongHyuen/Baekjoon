@@ -72,5 +72,8 @@
     <ClCompile Include="Problem2580.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Problem10828.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
