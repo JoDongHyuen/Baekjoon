@@ -4,12 +4,12 @@
 int stack[10001];
 int pos = -1;
 
-void push(int num)
+void Problem10828_push(int num)
 {
 	stack[++pos] = num;
 }
 
-int pop()
+int Problem10828_pop()
 {
 	if (pos == -1)
 		return pos;
@@ -17,7 +17,7 @@ int pop()
 		return stack[pos--];
 }
 
-int top()
+int Problem10828_top()
 {
 	if (pos == -1)
 		return pos;
@@ -25,12 +25,12 @@ int top()
 		return stack[pos];
 }
 
-int size()
+int Problem10828_size()
 {
 	return pos + 1;
 }
 
-int empty()
+int Problem10828_empty()
 {
 	if (pos == -1)
 		return 1;
@@ -51,23 +51,23 @@ int Problem10828()
 
 		if (strcmp(command, "push") == 0) {
 			scanf("%d", &input);
-			push(input);
+			Problem10828_push(input);
 		}
 
 		if (strcmp(command, "top") == 0) {
-			printf("%d\n", top());
+			printf("%d\n", Problem10828_top());
 		}
 
 		if (strcmp(command, "pop") == 0) {
-			printf("%d\n", pop());
+			printf("%d\n", Problem10828_pop());
 		}
 
 		if (strcmp(command, "size") == 0) {
-			printf("%d\n", size());
+			printf("%d\n", Problem10828_size());
 		}
 
 		if (strcmp(command, "empty") == 0) {
-			printf("%d\n", empty());
+			printf("%d\n", Problem10828_empty());
 		}
 	}
 }
