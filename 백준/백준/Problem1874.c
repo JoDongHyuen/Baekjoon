@@ -21,7 +21,7 @@ int Problem1874()
 {
 	int Test_Case;
 	int input, i, j;
-	int Num = 1, flag = 1;
+	int Num = 1;
 
 	scanf("%d", &Test_Case);
 
@@ -40,13 +40,13 @@ int Problem1874()
 			Problem1874_pop();
 		}
 		else if (Stack[Stack_Top] != input)
-			flag = 0;
+			break;
 		else
 			Problem1874_pop();
 
 	}
 
-	if (flag == 1)
+	if (i == Test_Case)
 		for (j = 0; j < Result_Idx; j++)
 			printf("%c\n", Result[j]);
 	else
