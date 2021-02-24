@@ -152,6 +152,7 @@
     <ClCompile Include="11_브루트포스.c" />
     <ClCompile Include="13_백트래킹.c" />
     <ClCompile Include="Problem10828.c" />
+    <ClCompile Include="Problem1874.c" />
     <ClCompile Include="Problem2580.c" />
     <ClCompile Include="class_01.c" />
     <ClCompile Include="main1.c" />
@@ -162,6 +163,7 @@
     <ClCompile Include="12_정렬.c" />
     <ClCompile Include="06_함수.c" />
     <ClCompile Include="main2.c" />
+    <ClCompile Include="Problem2943.c" />
     <ClCompile Include="실험실.c" />
     <ClCompile Include="실험실.cpp" />
   </ItemGroup>
