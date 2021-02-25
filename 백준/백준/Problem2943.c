@@ -2,33 +2,39 @@
 
 typedef struct _stack {
 	int Height;
-	int Min_Height;
-	int Max_Height;
+	int Recp_Tower;
 }Stack;
 
 Stack Stack_Tower[500000];
-int Problem2943_Stack_Top = -1;
+int Problem2943_Top = -1;
 
 void Problem2943_Push(int value)
 {
-	Stack_Tower[++Problem2943_Stack_Top].Height = value;
-	if (Problem2943_Stack_Top == 0) {
-		Stack_Tower[Problem2943_Stack_Top].Max_Height = value;
-		Stack_Tower[Problem2943_Stack_Top].Min_Height = value;
+	int i;
+
+	if (Problem2943_Top == -1)
+	{
+		Stack_Tower[++Problem2943_Top].Height = value;
+		Stack_Tower[Problem2943_Top].Recp_Tower = 0;
 	}
-	else if (value > Stack_Tower[Problem2943_Stack_Top - 1].Max_Height) {
-		Stack_Tower[Problem2943_Stack_Top].Max_Height = value;
-		Stack_Tower[Problem2943_Stack_Top].Min_Height = Stack_Tower[Problem2943_Stack_Top - 1].Min_Height;
+	else
+	{
+		for (i = Problem2943_Top; i >= 0; i--) {
+			if (Stack_Tower[i].Height < value && Stack_Tower[i].Recp_Tower == 0)
+			{
+				Stack_Tower[++Problem2943_Top].Height = value;
+				Stack_Tower[Problem2943_Top].Recp_Tower = 0;
+				break;
+			}
+			else if (Stack_Tower[i].Height > value)
+			{
+				Stack_Tower[++Problem2943_Top].Height = value;
+				Stack_Tower[Problem2943_Top].Recp_Tower = i + 1;
+				break;
+			}
+		}
 	}
-	
-	else if (value < Stack_Tower[Problem2943_Stack_Top - 1].Min_Height) {
-		Stack_Tower[Problem2943_Stack_Top].Max_Height = Stack_Tower[Problem2943_Stack_Top - 1].Max_Height;
-		Stack_Tower[Problem2943_Stack_Top].Min_Height = value;
-	}
-	else {
-		Stack_Tower[Problem2943_Stack_Top].Max_Height = Stack_Tower[Problem2943_Stack_Top - 1].Max_Height;
-		Stack_Tower[Problem2943_Stack_Top].Min_Height = Stack_Tower[Problem2943_Stack_Top - 1].Min_Height;
-	}
+
 }
 
 int Problem2943()
@@ -42,18 +48,10 @@ int Problem2943()
 	{
 		scanf("%d", &Tower_Height);
 		Problem2943_Push(Tower_Height);
+	}
 
-		if (Tower_Height == Stack_Tower[Problem2943_Stack_Top].Max_Height)
-			printf("%d ", 0);
-		else if (Tower_Height == Stack_Tower[Problem2943_Stack_Top].Min_Height)
-			printf("%d ", i);
-		else
-		{
-			count = 0;
-			for (j = 0; j < i; j++)
-				if (Tower_Height < Stack_Tower[j].Height)
-					count++;
-			printf("%d ", count);
-		}
+	for (i = 0; i < Test_Case; i++)
+	{
+		printf("%d ", Stack_Tower[i].Recp_Tower);
 	}
 }
