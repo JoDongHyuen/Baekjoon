@@ -7,7 +7,7 @@
 int NUMBER_ARR[11] = { 0 };
 int USED_CHECK[10] = { 0 };
 int OPERATOR[10];
-int MAX_RESULT = -10'0000'0001, MIN_RESULT = 10'0000'0001;
+int MAX_RESULT = -1000000001, MIN_RESULT = 1000000001;
 
 void Problem14888_Backtracking(int depth, int pos, int result)
 {
@@ -52,6 +52,7 @@ int Problem14888()
 	int Number_Num, Operator_Num = 0, Check_Operator;
 	int i, j, pos = 0;
 
+	/* ÀÔ·Â °ª */
 	scanf("%d", &Number_Num);
 	for (i = 0; i < Number_Num; i++)
 		scanf("%d", &NUMBER_ARR[i]);
@@ -62,5 +63,8 @@ int Problem14888()
 		for (j = 0; j < Check_Operator; j++)
 			OPERATOR[Operator_Num++] = i;
 	}
+
 	Problem14888_Backtracking(Operator_Num, 0, NUMBER_ARR[0]);
+	
+	printf("%d\n%d", MAX_RESULT, MIN_RESULT);
 }
