@@ -8,13 +8,18 @@ int TEAM[20] = { 0 };
 int Used_Check[20] = { 0 };
 int MIN_GAP = 1000000;
 
-int Problem14889_Backtracking(int depth, int pos)
+int Problem14889_Backtracking(int depth, int pos, int value)
 {
-	int i, j;
+	int i, j, temp;
 	int result, Team1_Sum, Team2_Sum;
 	
-	if (pos == depth)
+	if (pos == (depth / 2))
 	{
+		temp = pos;
+		for (i = 0; i < depth; i++)
+			if (Used_Check[i] == 0)
+				TEAM[temp++] = i;
+
 		Team1_Sum = 0, Team2_Sum = 0;
 		for (i = 0; i < (depth / 2); i++)
 			for (j = i; j < (depth / 2); j++) {
@@ -28,12 +33,12 @@ int Problem14889_Backtracking(int depth, int pos)
 	}
 	else
 	{
-		for(i = 0; i < depth; i++)
+		for(i = value; i < depth; i++)
 			if (Used_Check[i] == 0)
 			{
 				Used_Check[i] = 1;
 				TEAM[pos] = i;
-				Problem14889_Backtracking(depth, pos + 1);
+				Problem14889_Backtracking(depth, pos + 1, i);
 				Used_Check[i] = 0;
 			}
 	}
@@ -51,7 +56,7 @@ int Problem14889()
 			scanf("%d", &STAT[i][j]);
 
 	/* 백트래킹 파트 */
-	Problem14889_Backtracking(Human_Num, 0);
+	Problem14889_Backtracking(Human_Num, 0, 0);
 
 	/* 출력 파트 */
 	printf("%d\n", MIN_GAP);
