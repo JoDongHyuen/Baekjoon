@@ -12,17 +12,47 @@ void Problem10816_BS(int start, int end, int target)
 	if (start > end)
 		return;
 
-	if (N[mid] == target)
+	if (target < N[mid])
+		Problem10816_BS(start, mid - 1, target);
+	else if (N[mid] < target)
+		Problem10816_BS(mid + 1, end, target);
+	else
 	{
 		low_pos = MIN(mid, low_pos);
 		high_pos = MAX(mid, high_pos);
-	}
-
-	if (target <= N[mid])
 		Problem10816_BS(start, mid - 1, target);
-
-	if (N[mid] <= target)
 		Problem10816_BS(mid + 1, end, target);
+	}
+}
+
+int Problem10816_lower(int start, int end, int target)
+{
+	int mid;
+
+	while (start < end)
+	{
+		mid = (start + end) / 2;
+		if (N[mid] >= target)
+			end = mid;
+		else
+			start = mid + 1;
+	}
+	return end;
+}
+
+int Problem10816_upper(int start, int end, int target)
+{
+	int mid;
+
+	while (start < end)
+	{
+		mid = (start + end) / 2;
+		if (N[mid] > target)
+			end = mid;
+		else
+			start = mid + 1;
+	}
+	return end;
 }
 
 void Problem10816_Sort(int start, int end)
@@ -69,11 +99,12 @@ int Problem10816()
 		scanf("%d", &target);
 		low_pos = 500001;
 		high_pos = -1;
-		Problem10816_BS(0, Input_N - 1, target);
-		count = high_pos - low_pos + 1;
-		if (count > 0)
-			printf("%d ", count);
+		low_pos = Problem10816_lower(0, Input_N - 1, target);
+		high_pos = Problem10816_upper(0, Input_N - 1, target);
+
+		if (N[high_pos] == target)
+			printf("%d ", high_pos - low_pos + 1);
 		else
-			printf("%d ", 0);
+			printf("%d ", high_pos - low_pos);
 	}
 }
