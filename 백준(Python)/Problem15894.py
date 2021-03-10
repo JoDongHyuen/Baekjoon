@@ -3,7 +3,5 @@
 # -------------------------------------- 
 
 N = int(input())
-
-result = 3 + 3*(N - 1) + N
-
+result = 4 * N
 print(result)
