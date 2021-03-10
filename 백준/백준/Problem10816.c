@@ -1,11 +1,8 @@
 #include <stdio.h>
 
-#define MIN(a, b) (((a) < (b)) ? (a) : (b))
-#define MAX(a, b) (((a) > (b)) ? (a) : (b))
-
 int N[500000];
 int low_pos, high_pos;
-
+/*
 void Problem10816_BS(int start, int end, int target)
 {
 	int mid = (start + end) / 2;
@@ -23,7 +20,7 @@ void Problem10816_BS(int start, int end, int target)
 		Problem10816_BS(start, mid - 1, target);
 		Problem10816_BS(mid + 1, end, target);
 	}
-}
+}*/
 
 int Problem10816_lower(int start, int end, int target)
 {
