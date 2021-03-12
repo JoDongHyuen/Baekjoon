@@ -78,7 +78,58 @@
     <ClCompile Include="Problem1874.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Problem2943.c">
+    <ClCompile Include="Problem2493.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem6198.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem15666.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem14888.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem14889.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem1182.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem1920.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem2164.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem9012.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem10816.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem10845.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem10866.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem2805.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem1931.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem12865.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem1654.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem1158.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem18111.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

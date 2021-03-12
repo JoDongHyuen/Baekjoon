@@ -2,6 +2,49 @@
 #include <stdlib.h>
 #include <string.h>
 
+int sub(int a, int b)
+{
+	return a - b;
+}
+
+int funt_pointer()
+{
+	int(*p)(int, int) = sub;
+	int b;
+
+	printf("%d\n", p(30, 20));
+}
+
+int pointer_and_array_test()
+{
+	int a[3][5] = { {1,2,3,4,5}, {6,7,8,9,10}, {11,12,13,14,15} };
+	int *p;
+	p = a;
+	printf("%p\n", *(p + 1));
+}
+
+int static_alloc_test()
+{
+	int a = 5;
+	printf("%d\n", &a);
+	a = 6;
+	printf("%d\n", &a);
+}
+
+int VLA_test()
+{
+	int a = 5;
+	//int arr[a];
+}
+
+int malloc_test()
+{
+	int *data;
+
+	data = (int*)malloc(sizeof(int) * 10);
+	data = (int*)malloc(sizeof(int));
+}
+
 int strcmp_test()
 {
 	char str1[] = "aab";
@@ -14,15 +57,16 @@ int char_pointer_test()
 {
 	char str1[] = "Hello World";
 	char *str2 = "Hi C Language!";
+	char *str3;
 
 	//str = str + 1; // 얘는 실행 안됨
-	str2 = str2 + 1;
-
+	str2 = "Good bye C";
+	str3 = "Hi C Language!";
 	printf("%c", str1[0]);
 	//str2[0] = 'X'; // 얘는 컴파일 할 때 에러남
 
-	/* 여기서 알 수 있는 사실, char str1[]은 "포인터 상수"이고 "변수 형태의 문자열"이다!
-	 *						   char str2[]은 "포인터 변수"이고 "상수 형태의 문자열"이다! */
+	/* 여기서 알 수 있는 사실, char str1은 "포인터 상수"이고 "변수 형태의 문자열"이다!
+	 *						   char str2은 "포인터 변수"이고 "상수 형태의 문자열"이다! */
 }
 
 int strcpy_test()
@@ -62,7 +106,11 @@ int pointer_test()
 {
 	int *num1;
 	int *num2;
-
+	int a[5] = { 2, 4, 6, 8, 10 };
+	void *p = a;
+	int b = 5;
+	//&b = 10;
+	//printf("%d", p + 1);
 	num1 = malloc(sizeof(int));
 	*num1 = 7;
 	num2 = num1;

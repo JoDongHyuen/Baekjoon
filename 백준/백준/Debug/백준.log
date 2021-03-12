@@ -1,9 +1,8 @@
-﻿  Problem2943.c
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\problem2943.c(39): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  Problem18111.c
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\problem18111.c(12): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\problem2943.c(43): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\problem18111.c(15): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\problem2943.c(59): warning C4716: 'Problem2943': 값을 반환해야 합니다.
-Debug\실험실.obj : warning LNK4042: 개체가 두 번 이상 지정되었습니다. 나머지는 무시됩니다.
+c:\users\rhsnf\문서\visual studio 2015\projects\baekjoon\백준\백준\problem18111.c(51): warning C4716: 'Problem18111': 값을 반환해야 합니다.
   백준.vcxproj -> C:\Users\rhsnf\문서\Visual Studio 2015\Projects\baekjoon\백준\Debug\백준.exe
   백준.vcxproj -> C:\Users\rhsnf\문서\Visual Studio 2015\Projects\baekjoon\백준\Debug\백준.pdb (Full PDB)
