@@ -12,18 +12,18 @@ int near = -1;
 void Problem1107_Backtracking(int depth, int pos)
 {
 	int i;
-	if (pos == depth)
-	{
+	if (pos >= 1) {
 		if (near == -1) {
 			near = atoi(find);
-			sprintf(str,"%d",near);
+			sprintf(str, "%d", near);
 		}
-		else if (abs(atoi(channel) - atoi(find)) < abs(atoi(channel) - near)) {
+		if (abs(atoi(channel) - atoi(find)) < abs(atoi(channel) - near)) {
 			near = atoi(find);
 			sprintf(str, "%d", near);
 		}
 	}
-	else
+
+	if (pos < depth)
 	{
 		for (i = 0; i < 10; i++)
 			if (Button[i] == 0) {
@@ -57,7 +57,9 @@ int Problem1107()
 		printf("%d\n", strlen(channel) < gap ? strlen(channel) : gap);
 
 	else {
-		Problem1107_Backtracking(strlen(channel), 0);
+		for (i = 1; i <= strlen(channel) + 1; i++)
+			if (i < 7)
+				Problem1107_Backtracking(i, 0);
 		printf("%d\n",  (strlen(str) + abs(atoi(channel) - near)) < gap ? (strlen(str) + abs(atoi(channel) - near)) : gap);
 	}
 
