@@ -4,7 +4,7 @@
 
 N = int(input())
 A = list(map(int, input().split()))
-DP = [1 for x in range(1001)]
+DP = [1 for x in range(1001)]  # 0으로 초기화 했다가 틀림
 
 DP[0] = 1
 
