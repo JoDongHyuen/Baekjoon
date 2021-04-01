@@ -13,7 +13,7 @@ void swap(int a, int b)
 	Heap[b] = temp;
 }
 
-int Problem11279()
+int main()
 {
 	int Test_Case;
 	int i, input;
@@ -33,6 +33,7 @@ int Problem11279()
 				printf("%d\n", Heap[1]);
 				Heap[1] = Heap[count];
 				Heap[count] = 0;
+				count--;
 				temp = 1;
 				while (temp <= count)
 				{
@@ -49,29 +50,16 @@ int Problem11279()
 					else
 						break;
 				}
-				count--;
 			}
 		}
 		else
 		{
 			if (count == 0)
-				Heap[1] = input;
+				Heap[++count] = input;
 			else
 			{
-				while (1) {
- 					if (Heap[pos * 2] == 0) {
-						Heap[pos * 2] = input;
-						temp = pos * 2;
-						break;
-					}
-					else if (Heap[pos * 2 + 1] == 0) {
-						Heap[pos * 2 + 1] = input;
-						temp = pos * 2 + 1;
-						break;
-					}
-					else
-						pos++;
-				}
+				Heap[++count] = input;
+				temp = count;
 
 				while (temp != 1)
 				{
@@ -82,7 +70,6 @@ int Problem11279()
 					temp /= 2;
 				}
 			}
-			count++;
 		}
 	}
 }
