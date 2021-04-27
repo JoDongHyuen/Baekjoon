@@ -11,4 +11,4 @@ getcontext().prec = 1101
 a = Decimal(inp[0])
 b = Decimal(inp[1])
 
-print("{f}".format(pow(a, b)))
+print("{:f}".format(pow(a, b)))
