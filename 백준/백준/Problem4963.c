@@ -14,7 +14,7 @@ int visit[51][51];
 int w, h;
 int count;
 int front = 0, rear = 0;
-cordi queue[101];
+cordi queue[2501];
 
 void push(int row, int col)
 {
