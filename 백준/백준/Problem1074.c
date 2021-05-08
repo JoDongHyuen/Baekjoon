@@ -11,6 +11,7 @@ void Problem1074_recursive(long long row, long long col, long long size)
 
 	if (size == 1)
 	{
+		count = count + row * 2 + col;
 		return;
 	}
 
