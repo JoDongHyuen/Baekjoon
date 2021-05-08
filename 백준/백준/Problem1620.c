@@ -18,7 +18,7 @@ void Binary_Search(int start, int end, char* name)
 
 	if (start <= end) {
 		if (strcmp(name, Enc[mid].name) == 0)
-			printf("%d\n", Enc[mid].index);
+			printf("%d\n", Enc[mid].index + 1);
 		else if (strcmp(name, Enc[mid].name) < 0)
 			Binary_Search(start, mid - 1, name);
 		else
@@ -91,6 +91,6 @@ int Problem1620()
 			num = atoi(check);
 			printf("%s\n", EncTemp[num - 1]);
 		}
-				
+
 	}
 }
