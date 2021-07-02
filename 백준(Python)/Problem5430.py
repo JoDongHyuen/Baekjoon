@@ -14,6 +14,9 @@ for _ in range(Test_Case):
     input = str(sys.stdin.readline().strip())
     arr = deque(input[1:-1].split(","))
 
+    if element_num == 0:
+        arr.pop()
+
     reverse = False
     error = False
     for i in Ist:
