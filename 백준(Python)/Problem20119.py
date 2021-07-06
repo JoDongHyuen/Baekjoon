@@ -4,6 +4,7 @@
 from collections import deque
 import sys
 
+# 입력, 전처리
 N, M = map(int, sys.stdin.readline().split())
 recipe = []
 pre = [[] for _ in range(N + 1)] 
@@ -15,7 +16,8 @@ for i in range(M):
 
     for num in input[1:-1]:
         pre[num].append(i)
-    
+
+# 위상 정렬   
 L = int(sys.stdin.readline())
 y = list(map(int, sys.stdin.readline().split()))
 
@@ -36,6 +38,7 @@ while queue:
             queue.append(recipe[num][1])
             check[recipe[num][1]] = True
 
+# 출력
 print(sum(check))
 for i in range(N + 1):
     if check[i]:
