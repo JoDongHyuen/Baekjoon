@@ -21,7 +21,7 @@ while True:
     if n == 0:
         break
     else:
-        for i in range(3, 100001, 2):
+        for i in range(3, 1000001, 2):
             if check[i] == True and check[n - i] == True:
                 print("{} = {} + {}".format(n, i, n - i))
                 break
