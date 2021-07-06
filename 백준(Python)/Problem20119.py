@@ -1,30 +1,42 @@
 # --------------------------------------
 # 클레어와 물약
 # -------------------------------------- 
+from collections import deque
+import sys
 
-portion_num, recipe_num = map(int, input().split())
-dic = {}
+N, M = map(int, sys.stdin.readline().split())
+recipe = []
+pre = [[] for _ in range(N + 1)] 
+check = [False for _ in range(N + 1)]
 
-for _ in range(recipe_num):
-    recipe = list(map(int, input().split()))
-    dic[recipe[-1]] = set(recipe[1:-1])
+for i in range(M):
+    input = list(map(int, sys.stdin.readline().split()))
+    recipe.append([input[0], input[-1]])
 
-
-clare_know = input()
-clare_portion = set(map(int, input().split()))
-
-for _ in range(recipe_num):
-    flag = 0
+    for num in input[1:-1]:
+        pre[num].append(i)
     
-    for i, rec in list(dic.items()):
-        if clare_portion.intersection(rec) == rec:
-            clare_portion.add(i)
-            del(dic[i])
-            flag = 1
+L = int(sys.stdin.readline())
+y = list(map(int, sys.stdin.readline().split()))
 
-    if flag == 0:
-        break
+queue = deque()
 
-result = list(clare_portion)
-print(len(result))
-print(result)
+for num in y:
+    queue.append(num)
+    check[num] = True
+
+while queue:
+    index = queue.popleft()
+
+    for num in pre[index]:
+        recipe[num][0] -= 1
+
+
+        if recipe[num][0] == 0 and check[recipe[num][1]] == False:
+            queue.append(recipe[num][1])
+            check[recipe[num][1]] = True
+
+print(sum(check))
+for i in range(N + 1):
+    if check[i]:
+        print(i, end=" ")
