@@ -24,4 +24,3 @@ for _ in range(N):
         LIS[index] = num
 
 print(N - len(LIS))
-print(LIS)
