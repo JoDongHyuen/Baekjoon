@@ -30,14 +30,13 @@ while queue:
 
     if start == 100: break
 
-    if start in ladder:
-        queue.append((ladder[start], times))
-        continue
-    if start in snake:
-        queue.append((snake[start], times))
-        continue
-
     for i in range(1, 7):
+        if (start + i) in ladder:
+            queue.append((ladder[(start + i)], times + 1))
+            continue
+        if (start + i) in snake:
+            queue.append((snake[(start + i)], times + 1))
+            continue
         queue.append((start + i, times + 1))
 
 print(times)
