@@ -50,6 +50,7 @@ for edge in edges:
     if p != q:
         result += w
         F += 1
+        sets.Union(p,q)
     
     if F >= V - 1: break
 
