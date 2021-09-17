@@ -7,7 +7,7 @@ import math
 import heapq
 
 class DS:
-    def __init__(self, size) -> None:
+    def __init__(self, size):
         self.parent =  [-1 for _ in range(size + 1)]
 
     def Union(self, i, j):
@@ -40,31 +40,35 @@ pq = []
 sets = DS(N)
 result = 0
 F = 0
-
-for i in range(N):
+for _ in range(N):
     point.append(list(map(float, sys.stdin.readline().split())))
 
-for i in range(M):
+for _ in range(M):
     x, y = map(int, sys.stdin.readline().split())
-    heapq.heappush(pq, (0, x, y))
-    
 
-for p1 in range(1, N + 1):
-    for p2 in range(p1 + 1, N + 1):
-        x = point[p1][0] - point[p2][0]
-        y = point[p1][1] - point[p2][1]
+    p = sets.Find(x)
+    q = sets.Find(y)
+
+    if p != q:
+        sets.Union(p, q)
+        F += 1
+
+for i in range(1, N + 1):
+    for j in range(i + 1, N + 1):
+        x = point[i][0] - point[j][0]
+        y = point[i][1] - point[j][1]
         distance = math.sqrt(x * x + y * y)
-        heapq.heappush(pq, (distance, p1, p2))
+        heapq.heappush(pq, (distance, i, j))
 
 
-while F < (N - 1):
-    distance, p1, q2 = heapq.heappop(pq)
-    
+while F < N - 1:
+    distance, p1, p2 = heapq.heappop(pq)
+
     p = sets.Find(p1)
     q = sets.Find(p2)
 
     if p != q:
-        sets.Union(p1, q2)
+        sets.Union(p, q)
         result += distance
         F += 1
 
