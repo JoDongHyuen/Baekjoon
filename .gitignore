@@ -1,0 +1,11 @@
+*.obj
+*.enc
+*.tlog
+*.pdb
+*.log
+*.idb
+*.vcxproj
+*.filters
+백준\Debug\
+백준\백준\Debug
+
